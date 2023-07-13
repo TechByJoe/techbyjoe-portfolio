@@ -1,0 +1,570 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  div {
+    animation: fadeInUp ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  #bottomInfo {
+    animation: fadeInUp ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 50%, 0);
+      transform: translate3d(0, 50%, 0);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .zoomIn {
+    animation-name: zoomIn;
+  }
+
+  .animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+
+  /* <!-- Animation Load in --> */
+
+
+  /* <!-- Navbar --> */
+
+  .topNav {
+    overflow: hidden;
+    text-align: center;
+    background-color: #262626;
+  }
+
+  /* #navHeader.sticky{
+    position: fixed;
+    top: 0.5vw;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+    z-index: 99;
+  } */
+  /* #topNav.sticky{
+    animation: fadeInUp 0.2s;
+    margin: 0;
+    top: 0;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    background: rgb(60, 60, 60);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 2.5em;
+  } */
+  /* .navbarOffsetMargin {
+    padding-top: 4vw;
+} */
+
+  .mobileNavContainer {
+    display: none;
+  }
+
+  .topNav a {
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    word-wrap: break-word;
+  }
+
+  .topNav a:hover {
+    color: #a1b8de;
+  }
+
+  .topNav a.active {
+    color: #428BFF;
+  }
+
+
+  ul {
+    padding-inline-start: 0;
+  }
+
+  /* <!-- Navbar --> */
+
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #707070 #dbdbdb;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #3e3e3e6a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(138, 138, 138, 0.808);
+    border-radius: 10px;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+
+  html {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    font-size: 3.5vw;
+  }
+
+  #fullscreen {
+    display: none;
+    position: fixed;
+    text-align: center;
+    right: 1vw;
+    left: 1vw;
+    top: 1vw;
+    bottom: 1vw;
+    z-index: 11;
+    background: rgb(60, 60, 60);
+    padding: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 2.5em;
+
+    animation: zoomIn ease-out 0.35s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  #exit {
+    position: fixed;
+    min-width: 110px;
+    font-size: 1.5vw;
+    padding: 0.5vw;
+    padding-left: 0.75vw;
+    padding-right: 0.75vw;
+    bottom: 2.5vw;
+    right: 2.5vw;
+    background-color: #428BFF;
+    color: #FFF;
+    text-align: center;
+    border-radius: 2.5em;
+    z-index: 11;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  #exit:hover {
+    cursor: pointer;
+  }
+
+  body {
+    background: #262626;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+  }
+
+  body h1 {
+    text-align: center;
+    color: #428BFF;
+    font-weight: 300;
+    font-size: 1.7vw;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .textBox {
+    font-size: 1em;
+    color: white;
+  }
+
+  iframe {
+    border-radius: 1.5em;
+    height: 100%;
+    width: 100%;
+  }
+
+  .imageContainer {
+    height: auto;
+    width: auto;
+    position: relative;
+    text-align: center;
+  }
+
+  .image {
+    border-radius: 2.5em;
+    width: 100%;
+  }
+
+  .objectViewer {
+    height: auto;
+    width: 60%;
+  }
+
+  .sectionBox {
+    position: relative;
+    background: rgb(60, 60, 60);
+    padding: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 2.5em;
+    min-width: 240px;
+  }
+
+  .column {
+    color: white;
+    padding: 2vw;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 35%;
+  }
+
+  .columnText {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+  }
+
+  .imageLink {
+    inline-size: 10vw;
+    border-radius: 10%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .headshot {
+    border-radius: 50%;
+    inline-size: 15em;
+    margin: 2vw;
+    shape-outside: circle();
+    float: left;
+  }
+
+  .headshotColumn {
+    color: white;
+    padding: 2vw;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .headshotText {
+    font-size: 1.4vw;
+  }
+
+  #viewin3D {
+    position: absolute;
+    padding: 1.5vw 0px 1.5vw 0px;
+    right: 16.75em;
+    bottom: 1.5vw;
+    min-width: 110px;
+    background-color: #428BFF;
+    color: white;
+    cursor: pointer;
+  }
+
+  #bottomInfo {
+    padding: 3px;
+    min-width: 220px;
+    text-align: center;
+    padding: 0.5vw;
+    width: 17.5em;
+    margin: auto;
+  }
+
+  #csBenchGallery {
+    max-width: 63%;
+  }
+
+  #knifeHandleGallery {
+    max-width: 35%;
+  }
+
+
+  /* Joey Giordano */
+  @media all and (min-width: 850px) {
+
+    .header {
+      font-size: 3vw;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .image {
+      height: auto;
+      width: 60%;
+    }
+
+    .objectViewer {
+      height: auto;
+      width: 60%;
+    }
+
+    .spacer {
+      height: 0;
+    }
+    .brSpacer{
+      height: 2.7vw;
+    }
+
+    #viewin3D {
+      font-size: 1.25vw;
+      padding: 0.5vw;
+      padding-left: 0.75vw;
+      padding-right: 0.75vw;
+    }
+
+  }
+
+  /* tablet */
+  @media all and (max-width: 950px) and (min-width: 600px) {
+
+    .imageContainer {
+      width: 100%;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      border-radius: 2.5em;
+    }
+
+    .objectViewer {
+      width: 100%;
+      height: auto;
+    }
+
+    .header {
+      font-size: 8vw;
+    }
+
+    .topNav {
+      display: block;
+    }
+
+    .topNav a {
+      font-size: 3.5vw;
+    }
+
+    body h1 {
+      font-size: 2.5em;
+    }
+
+    .column {
+      width: 70%;
+    }
+
+    .columnText {
+      color: white;
+      font-style: italic;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      width: 60%;
+    }
+
+    .headshotText {
+      font-size: 2.5vw;
+    }
+
+    #viewin3D {
+      right: 2vw;
+      bottom: 2.75vw;
+      font-size: 3vw;
+      padding: 0.75vw 1.75vw;
+    }
+
+    #exit {
+      right: 2vw;
+      bottom: 2.75vw;
+      font-size: 3vw;
+      padding: 0.75vw 1.75vw;
+    }
+
+    #iframe {
+      height: 100%;
+    }
+
+    .imageLink {
+      inline-size: 25%;
+      border-radius: 1.5em;
+    }
+
+    .spacer {
+      height: 1.5vw;
+    }
+
+    .bottomInfo {
+      padding: 3px;
+      font-size: 2.2vw;
+    }
+
+    #csBenchGallery {
+      max-width: 100%;
+    }
+
+    #knifeHandleGallery {
+      max-width: 100%;
+    }
+
+  }
+
+  /* smartphone */
+  @media all and (max-width: 600px) and (min-width: 280px) {
+    .sectionBox ul li label {
+      font-size: 2.5vw;
+    }
+
+    .topNav {
+      display: none;
+    }
+
+    .header {
+      font-size: 2.8em;
+    }
+
+    .imageContainer {
+      width: 100%;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      border-radius: 1.5em;
+    }
+
+    .objectViewer {
+      width: 100%;
+      height: auto;
+    }
+
+    .textBox {
+      font-size: 4vw;
+      color: white;
+    }
+
+    body h1 {
+      font-size: 1.5em;
+    }
+
+    .column {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .columnText {
+      color: white;
+      font-style: italic;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      width: 60%;
+    }
+
+    .headshot {
+      display: inline-block;
+      float: none;
+      width: 55%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    .headshotText {
+      font-size: 4.25vw;
+    }
+
+    .brSpacer{
+      height: 0px;
+    }
+
+
+    #csBenchGallery {
+      max-width: 100%;
+    }
+
+    #knifeHandleGallery {
+      max-width: 100%;
+    }
+
+    .mySlides {
+      pointer-events: none;
+    }
+
+    .prev,
+    .next {
+      background-color: rgba(0, 0, 0, 0);
+
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .dot {
+      display: none;
+    }
+
+    .imageLink {
+      inline-size: 35%;
+      border-radius: 1.5em;
+    }
+
+    #viewin3D {
+      right: 1.5vw;
+      bottom: 3vw;
+    }
+
+    #exit {
+      right: 1.5vw;
+      bottom: 3vw;
+      font-size: 5vw;
+      padding: 0.75vw 1.75vw;
+    }
+
+
+    .spacer {
+      height: 1.5vw;
+    }
+
+    .bottomInfo {
+      right: 1vw;
+      padding: 3px;
+      font-size: 3vw;
+    }
+
+  }

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="imageGallery.css">
+<link rel="stylesheet" href="mobileNav.css">
+
+<div id="fullscreen">
+  <div id="exit" onclick="closeFullscreen()">Exit</div>
+</div>
+
+<nav id="mobileNavHeader">
+  <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
+    Joey Giordano</h1>
+  <h1 class="designPortfolio">Design Portfolio</h1>
+  <nav class="mobileNavContainer" onclick="openNav()">
+    <nav>Design Portfolio</nav>
+    <nav class="arrowContainer">
+      <nav class="arrowIcon"></nav>
+    </nav>
+
+    <nav id="mobileNavOverlay" class="overlay">
+      <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="index.html">About</a>
+        <a href="Convertible Solar Bench.html">Convertible Solar Bench</a>
+        <a href="Metal Chair.html">Metal Chair</a>
+        <a href="Dough Mixer.html">Dough Mixer</a>
+        <a href="Knife Handle.html">Knife Handle</a>
+        <a href="Drive Pulley.html">Drive Pulley</a>
+      </div>
+    </nav>
+  </nav>
+</nav>
+
+<ul class="topNav">
+  <a class="active" href="index.html">About</a>
+  <a href="Convertible Solar Bench.html">Convertible Solar Bench</a>
+  <a href="Metal Chair.html">Metal Chair</a>
+  <a href="Dough Mixer.html">Dough Mixer</a>
+  <a href="Knife Handle.html">Knife Handle</a>
+  <a href="Drive Pulley.html">Drive Pulley</a>
+</ul>
+
+<div id="spacer"></div>
+
+<div class="sectionBox">
+  <h2 style="padding: 0px; margin: 0px;">About Me</h2>
+
+  <div class="headshotColumn">
+    <img class="headshot" src="images/Headshot.jpg">
+    <br>
+    <div class="headshotText">
+      <div class="brSpacer"></div>
+      <div class="brSpacer"></div>
+      I am an undergraduate student at Montclair State University currently pursuing a BA in Business Administration
+      with a concentration in Entrepreneurship. I have many interests and skill sets but especially love to design new
+      things. I have extensive experience in computer science and information technology, although my true passion is
+      design - specifically through the use of additive and subtractive manufacturing.
+
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<script type="text/javascript" src="scripts.js"></script>
+
+<br>
+
+<div id='bottomInfo' class="sectionBox">
+  <div>Email: <a href="mailto:joeymg08@gmail.com" style="color:rgb(255, 255, 255)">Joeymg08@gmail.com </a> </div>
+</div>
+
+<br>
