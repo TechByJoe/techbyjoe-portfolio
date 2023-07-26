@@ -50,12 +50,24 @@
   .zoomIn {
     animation-name: zoomIn;
   }
-
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
   .animate__fadeInUp {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
   }
 
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
   /* <!-- Animation Load in --> */
 
 
@@ -67,7 +79,8 @@
     background-color: #262626;
   }
 
-  /* #navHeader.sticky{
+
+  #navHeader.sticky{
     position: fixed;
     top: 0.5vw;
     left: 0;
@@ -75,8 +88,8 @@
     width: fit-content;
     margin: auto;
     z-index: 99;
-  } */
-  /* #topNav.sticky{
+  }
+  #topNav.sticky{
     animation: fadeInUp 0.2s;
     margin: 0;
     top: 0;
@@ -84,10 +97,10 @@
     background: rgb(60, 60, 60);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius: 2.5em;
-  } */
-  /* .navbarOffsetMargin {
+  }
+  .navbarOffsetMargin {
     padding-top: 4vw;
-} */
+}
 
   .mobileNavContainer {
     display: none;
@@ -118,19 +131,19 @@
 
 
   /* ===== Scrollbar CSS ===== */
-  /* Firefox */
   * {
     scrollbar-width: auto;
     scrollbar-color: #707070 #dbdbdb;
   }
 
-  /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 12px;
+    cursor: pointer;
   }
 
   *::-webkit-scrollbar-track {
     background: #3e3e3e6a;
+    cursor: pointer;
   }
 
   *::-webkit-scrollbar-thumb {
@@ -149,6 +162,16 @@
     font-size: 3.5vw;
   }
 
+  .header-link {
+    text-decoration: none;
+    /** TEXT GRADIENT */
+    color: #8d8d8d;
+    background-image: -webkit-linear-gradient(90deg, #8d8d8d  0%, #ffffff 51%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   #fullscreen {
     display: none;
     position: fixed;
@@ -157,7 +180,8 @@
     left: 1vw;
     top: 1vw;
     bottom: 1vw;
-    z-index: 11;
+    z-index: 9999;
+    overflow: hidden;
     background: rgb(60, 60, 60);
     padding: 30px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -166,6 +190,14 @@
     animation: zoomIn ease-out 0.35s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+
+  #fullscreen iframe {
+    overflow: hidden;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
   }
 
   #exit {
@@ -189,6 +221,19 @@
     cursor: pointer;
   }
 
+  .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   body {
     background: #262626;
     color: rgb(255, 255, 255);
@@ -206,7 +251,7 @@
   }
 
   .textBox {
-    font-size: 1em;
+    font-size: 1.2em;
     color: white;
   }
 
@@ -226,6 +271,7 @@
   .image {
     border-radius: 2.5em;
     width: 100%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 
   .objectViewer {
@@ -267,7 +313,7 @@
     vertical-align: middle;
   }
 
-  .headshot {
+  .logo {
     border-radius: 50%;
     inline-size: 15em;
     margin: 2vw;
@@ -275,18 +321,18 @@
     float: left;
   }
 
-  .headshotColumn {
+  .logoColumn {
     color: white;
     padding: 2vw;
     display: inline-block;
     vertical-align: middle;
   }
 
-  .headshotText {
+  .logoText {
     font-size: 1.4vw;
   }
 
-  #viewin3D {
+  #viewWebsite {
     position: absolute;
     padding: 1.5vw 0px 1.5vw 0px;
     right: 16.75em;
@@ -324,6 +370,15 @@
       padding-top: 0;
     }
 
+    .header-link {
+      text-decoration: none;
+      background: #F0F0F0;
+      background: linear-gradient(to top, #F0F0F0 0%, #FFFFFF 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     .image {
       height: auto;
       width: 60%;
@@ -337,11 +392,12 @@
     .spacer {
       height: 0;
     }
-    .brSpacer{
+
+    .brSpacer {
       height: 2.7vw;
     }
 
-    #viewin3D {
+    #viewWebsite {
       font-size: 1.25vw;
       padding: 0.5vw;
       padding-left: 0.75vw;
@@ -401,7 +457,7 @@
       font-size: 2.5vw;
     }
 
-    #viewin3D {
+    #viewWebsite {
       right: 2vw;
       bottom: 2.75vw;
       font-size: 3vw;
@@ -417,6 +473,7 @@
 
     #iframe {
       height: 100%;
+      scrollbar-width: 0;
     }
 
     .imageLink {
@@ -509,7 +566,7 @@
       font-size: 4.25vw;
     }
 
-    .brSpacer{
+    .brSpacer {
       height: 0px;
     }
 
@@ -544,9 +601,10 @@
       border-radius: 1.5em;
     }
 
-    #viewin3D {
+    #viewWebsite {
       right: 1.5vw;
       bottom: 3vw;
+      padding: 1.5vw 2.5vw;
     }
 
     #exit {

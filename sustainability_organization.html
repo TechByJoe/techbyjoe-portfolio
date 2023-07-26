@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="imageGallery.css">
+<link rel="stylesheet" href="mobileNav.css">
+
+<div id="fullscreen">
+  <div id="exit" onclick="closeFullscreen()">Exit</div>
+</div>
+
+<nav id="mobileNavHeader">
+  <h1 class="header" onclick="location.href='index.html';" style="color: rgb(255, 255, 255); font-weight: bolder;">
+    <a class="header-link" href="index.html">Tech By Joe</a>
+  </h1>
+  <h1 class="designPortfolio">Web Design Portfolio</h1>
+  <nav class="mobileNavContainer" onclick="openNav()">
+    <nav>Web Design Portfolio</nav>
+    <nav class="arrowContainer">
+      <nav class="arrowIcon"></nav>
+    </nav>
+
+    <nav id="mobileNavOverlay" class="overlay">
+      <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="/">About</a>
+        <a href="services.html">Services</a>
+        <a href="sustainability_organization.html">Sustainability Organization</a>
+        <a href="mechanical_engineer_portfolio.html">Mechanical Engineer Portfolio</a>
+      </div>
+    </nav>
+  </nav>
+</nav>
+
+<header id="navHeader">
+  <ul class="topNav" id="topNav">
+    <a class="page" href="index.html">About</a>
+    <a class="page" href="services.html">My Services</a>
+    <a class="page active" href="sustainability_organization.html">Sustainability Organization</a>
+    <a class="page" href="mechanical_engineer_portfolio.html">Mechanical Engineer Portfolio</a>
+  </ul>
+</header>
+<!-- Navbar  -->
+
+<div id="spacer"></div>
+
+<div class="sectionBox">
+  <h2 style="padding: 0px; margin: 0px;">Sustainability Organization</h2>
+  <div class="textBox">
+    This client needed to build a brand but didn't know where to start. With an outdated website and a mission centered
+    around sustainability, they sought a partner who could establish their digital presence while creating a cohesive brand
+    identity. In response to their needs, I designed Gaia's logo, promotional banners, and marketing materials, in
+    addition to crafting their current website. The result is a compelling online platform that reflects Gaia's
+    commitment to the environment and empowers their vision for a greener future.
+  </div>
+</div>
+
+<br>
+
+<div class="imageContainer">
+  <img class="image" src="images/gaia.jpg">
+  <div id="viewWebsite" onclick="openFullscreen('https:\/\/gaiacompetition.com')" class="sectionBox">View Website </div>
+</div>
+
+<br>
+
+<div class="imageContainer">
+  <img class="image" src="images/gaia_old.png">
+  <div id="viewWebsite" onclick="openFullscreen(Bench_Table)" class="sectionBox">View Website </div>
+</div>
+
+<br>
+<script type="text/javascript" src="scripts.js"></script>
+
+<br>
+
+<div id='bottomInfo' class="sectionBox">
+  <div>Email: <a href="mailto:joe@techbyjoe.co" style="color:rgb(255, 255, 255)">Joe@techbyjoe.co </a> </div>
+</div>
+
+<br>

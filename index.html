@@ -10,8 +10,9 @@
 </div>
 
 <nav id="mobileNavHeader">
-  <h1 class="header" href="/" style="color: rgb(255, 255, 255); font-weight: bolder;">
-    Tech By Joe</h1>
+  <h1 class="header" onclick="location.href='index.html';" style="color: rgb(255, 255, 255); font-weight: bolder;">
+    <a class="header-link" href="index.html">Tech By Joe</a>
+  </h1>
   <h1 class="designPortfolio">Web Design Portfolio</h1>
   <nav class="mobileNavContainer" onclick="openNav()">
     <nav>Web Design Portfolio</nav>
@@ -22,35 +23,41 @@
     <nav id="mobileNavOverlay" class="overlay">
       <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
-        <a href="index.html">About</a>
+        <a href="/">About</a>
         <a href="services.html">Services</a>
-        <a href="Convertible Solar Bench.html">Sustainability Organization</a>
-        <a href="Knife Handle.html">Mechanical Engineer Portfolio</a>
+        <a href="sustainability_organization.html">Sustainability Organization</a>
+        <a href="mechanical_engineer_portfolio.html">Mechanical Engineer Portfolio</a>
       </div>
     </nav>
   </nav>
 </nav>
 
-<ul class="topNav">
-  <a class="active" href="index.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="Metal Chair.html">Sustainability Organization</a>
-  <a href="Dough Mixer.html">Mechanical Engineer Portfolio</a>
-</ul>
+<header id="navHeader">
+  <ul class="topNav" id="topNav">
+    <a class="page active" href="index.html">About</a>
+    <a class="page" href="services.html" >My Services</a>
+    <a class="page" href="sustainability_organization.html">Sustainability Organization</a>
+    <a class="page" href="mechanical_engineer_portfolio.html">Mechanical Engineer Portfolio</a>
+  </ul>
+</header>
+
+<!-- Navbar  -->
 
 <div id="spacer"></div>
 
 <div class="sectionBox">
-  <h2 style="padding: 0px; margin: 0px;">About Me</h2>
+  <h2 style="padding: 0px; margin: 0px;">About</h2>
 
-  <div class="headshotColumn">
-    <img class="headshot" src="images/Headshot.jpg">
+  <div class="logoColumn">
+    <img class="logo" src="images/logo.png">
     <br>
-    <div class="headshotText">
-      <div class="brSpacer"></div>
-  
-      The main page information goes here. Lorem ipsum sit dolors...
-
+    <div class="logoText">
+      Maximize your business potential with my comprehensive services, designed to enhance your digital presence and
+      streamline customer interactions. I specialize in professional web design, graphic design, and custom software
+      solutions. With a base in New Jersey, my expertise is dedicated to showcasing your best work and providing a
+      seamless, efficient experience for your customers. Custom pricing plans are available, tailored to meet your
+      specific requirements and budget. For more details and to explore the possibilities of collaboration, don't
+      hesitate to get in touch. Let's optimize your business for success.
     </div>
   </div>
 
@@ -63,7 +70,7 @@
 <br>
 
 <div id='bottomInfo' class="sectionBox">
-  <div>Email: <a href="mailto:joe@techbyjoe.co" style="color:rgb(255, 255, 255)">joe@techbyjoe.co </a> </div>
+  <div>Email: <a href="mailto:joe@techbyjoe.co" style="color:rgb(255, 255, 255)">Joe@techbyjoe.co </a> </div>
 </div>
 
 <br>

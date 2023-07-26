@@ -15,32 +15,32 @@ function closeNav() {
 }
 
 // image gallery
-let slideIndex = 1;
-showSlides(slideIndex);
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" activeDot", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " activeDot";
-}
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) { slideIndex = 1 }
+//   if (n < 1) { slideIndex = slides.length }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" activeDot", "");
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   dots[slideIndex - 1].className += " activeDot";
+// }
 
 
 // Mobile Navigation Sticky
@@ -61,40 +61,72 @@ window.addEventListener("scroll", e => {
 
 // Desktop Navigation Sticky
 
-// let navbar = document.getElementById("navHeader");
-// let topNav = document.getElementById("topNav");
-// let navPos = navbar.getBoundingClientRect().top;
-// let spacer = document.getElementById("spacer");
+let navbar = document.getElementById("navHeader");
+let topNav = document.getElementById("topNav");
+let spacer = document.getElementById("spacer");
 
-// window.addEventListener("scroll", e => {
-//   let scrollPos = window.scrollY;
-//   if (scrollPos > navPos) {
-//     navbar.classList.add('sticky');
-//     topNav.classList.add('sticky');
-//     spacer.classList.add('navbarOffsetMargin');
-//   } else {
-//     navbar.classList.remove('sticky');
-//     topNav.classList.remove('sticky');
-//     spacer.classList.remove('navbarOffsetMargin');
-//   }
-// });
+
+
+if (window.screen.width > 600) {
+  window.addEventListener("scroll", e => {
+    let navPos = navbar.getBoundingClientRect().top;
+    let scrollPos = window.scrollY;
+    if (scrollPos > navPos + 110) {
+      navbar.classList.add('sticky');
+      topNav.classList.add('sticky');
+      spacer.classList.add('navbarOffsetMargin');
+    } else {
+      navbar.classList.remove('sticky');
+      topNav.classList.remove('sticky');
+      spacer.classList.remove('navbarOffsetMargin');
+    }
+  });
+}
 
 
 function openFullscreen(content) {
-
   if (window.screen.width < 600) {
-    open(content, '_blank')
-  }
-  else {
-    div = "<iframe style=\"border:none; \" src=' " + content + " \' </iframe>";
-    fullscreenContent.innerHTML += div;
+    open(content, '_blank');
+  } else {
+    var fullscreenContent = document.getElementById("fullscreen");
+    fullscreenContent.innerHTML = "";
+
+    var spinner = document.createElement("div");
+    spinner.classList.add("spinner");
+    fullscreenContent.appendChild(spinner);
+
+    var iframe = document.createElement("iframe");
+    iframe.style.border = "none";
+    iframe.src = content;
+    iframe.onload = function () {
+      hideSpinner();
+    };
+    fullscreenContent.appendChild(iframe);
+
+    var exitButton = document.createElement("div");
+    exitButton.id = "exit";
+    exitButton.innerText = "Exit";
+    exitButton.onclick = function () {
+      closeFullscreen();
+    };
+    fullscreenContent.appendChild(exitButton);
+
     fullscreenContent.style.display = "block";
+    document.getElementById("topNav").style.display = "none";
+    document.body.classList.add("no-scroll");
   }
 }
+
 
 function closeFullscreen() {
   fullscreenContent.innerHTML = '<div id="exit" onclick="closeFullscreen()">Exit</div>'
   fullscreenContent.style.display = "none";
+  document.getElementById("topNav").style.display = "block";
+  document.body.classList.remove("no-scroll");
+}
+
+function hideSpinner() {
+  document.querySelector('.spinner').style.display = 'none';
 }
 
 document.addEventListener('keydown', evt => {

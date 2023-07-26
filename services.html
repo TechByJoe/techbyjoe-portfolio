@@ -6,100 +6,67 @@
 <link rel="stylesheet" href="mobileNav.css">
 
 <div id="fullscreen">
-    <div id="exit" onclick="closeFullscreen()">Exit</div>
+  <div id="exit" onclick="closeFullscreen()">Exit</div>
 </div>
 
 <nav id="mobileNavHeader">
-    <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
-        Joey Giordano</h1>
-    <h1 class="designPortfolio">Design Portfolio</h1>
-    <nav class="mobileNavContainer" onclick="openNav()">
-        <nav>Design Portfolio</nav>
-        <nav class="arrowContainer">
-            <nav class="arrowIcon"></nav>
-        </nav>
-
-        <nav id="mobileNavOverlay" class="overlay">
-            <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="index.html">About</a>
-                <a href="Convertible Solar Bench.html">Convertible Solar Bench</a>
-                <a href="Metal Chair.html">Metal Chair</a>
-                <a href="Dough Mixer.html">Dough Mixer</a>
-                <a href="Knife Handle.html">Knife Handle</a>
-                <a href="Drive Pulley.html">Drive Pulley</a>
-            </div>
-        </nav>
+  <h1 class="header" onclick="location.href='index.html';" style="color: rgb(255, 255, 255); font-weight: bolder;">
+    <a class="header-link" href="index.html">Tech By Joe</a>
+  </h1>
+  <h1 class="designPortfolio">Web Design Portfolio</h1>
+  <nav class="mobileNavContainer" onclick="openNav()">
+    <nav>Web Design Portfolio</nav>
+    <nav class="arrowContainer">
+      <nav class="arrowIcon"></nav>
     </nav>
+
+    <nav id="mobileNavOverlay" class="overlay">
+      <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="/">About</a>
+        <a href="services.html">Services</a>
+        <a href="sustainability_organization.html">Sustainability Organization</a>
+        <a href="mechanical_engineer_portfolio.html">Mechanical Engineer Portfolio</a>
+      </div>
+    </nav>
+  </nav>
 </nav>
 
-<ul class="topNav">
-    <a href="index.html">About</a>
-    <a href="Convertible Solar Bench.html">Convertible Solar Bench</a>
-    <a href="Metal Chair.html">Metal Chair</a>
-    <a href="Dough Mixer.html">Dough Mixer</a>
-    <a class="active" href="Knife Handle.html">Knife Handle</a>
-    <a href="Drive Pulley.html">Drive Pulley</a>
-</ul>
-<!-- Navbar -->
+<header id="navHeader">
+  <ul class="topNav" id="topNav">
+    <a class="page" href="index.html">About</a>
+    <a class="page active" href="services.html">My Services</a>
+    <a class="page" href="sustainability_organization.html">Sustainability Organization</a>
+    <a class="page" href="mechanical_engineer_portfolio.html">Mechanical Engineer Portfolio</a>
+  </ul>
+</header>
+<!-- Navbar  -->
 
 <div id="spacer"></div>
 
 <div class="sectionBox">
-    <h2 style="padding: 0px; margin: 0px;">Knife Handle</h2>
+  <h2 style="padding: 0px; margin: 0px;">My Services</h2>
 
-    <div class="textBox">
-        My services include...
-
-        
+  <div class="logoColumn">
+    <div class="logoText">
+      Enhance your business's digital presence and streamline customer interactions with my professional services. I
+      specialize in web design, graphic design, and custom software solutions, all crafted to showcase your best work
+      and provide a seamless experience for your customers. Based in New Jersey, we offer custom pricing plans tailored
+      to your specific requirements and budget. Don't hesitate to get in touch to explore the possibilities of
+      collaboration and optimize your business for success.
     </div>
+  </div>
 
-</div>
-
-<br>
-
-<div class="imageContainer">
-    <img class="image" src="images/Knife_Handle.jpg">
-    <div id="viewin3D" onclick="openFullscreen(Knife_Handle)" class="sectionBox">View in 3D </div>
-</div>
-
-<br>
-
-<div class="sectionBox">
-    <h2 style="padding: 0px; margin: 0px;">Photo Gallery</h2>
-
-    <div class="spacer"></div>
-
-    <div class="slideshow-container" id="knifeHandleGallery">
-
-        <img class="mySlides" src="images/knifeHandle1.jpg" style="width:100%">
-        <img class="mySlides" src="images/knifeHandle2.jpg" style="width:100%">
-        <img class="mySlides" src="images/knifeHandle3.jpg" style="width:100%">
-
-        <!-- Next and previous buttons -->
-
-        <a class="prev" onclick="plusSlides(-1)">
-            <div class="arrowLeft"></div>
-        </a>
-        <a class="next" onclick="plusSlides(1)">
-            <div class="arrowRight"></div>
-        </a>
-
-        <div style="text-align:center; bottom: 0;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-
-    </div>
 </div>
 
 <br>
 
 <script type="text/javascript" src="scripts.js"></script>
 
+<br>
+
 <div id='bottomInfo' class="sectionBox">
-    <div>Email: <a href="mailto:joeymg08@gmail.com" style="color:rgb(255, 255, 255)">Joeymg08@gmail.com </a> </div>
+  <div>Email: <a href="mailto:joe@techbyjoe.co" style="color:rgb(255, 255, 255)">Joe@techbyjoe.co </a> </div>
 </div>
 
 <br>
