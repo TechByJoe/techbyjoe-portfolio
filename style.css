@@ -317,7 +317,7 @@
     border-radius: 50%;
     inline-size: 15em;
     margin: 2vw;
-    shape-outside: circle();
+    /* shape-outside: circle(); */
     float: left;
   }
 
