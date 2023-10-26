@@ -1,0 +1,81 @@
+ /* Add smooth transition for sticky navigation bar */
+ #navHeader,
+ #topNav {
+     transition: all 0.3s ease-in;
+ }
+
+ #navContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+ }
+
+ #navHeader.sticky {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     width: fit-content;
+     margin: auto;
+     z-index: 99;
+ }
+
+ #topNav.sticky {
+     animation: fadeInDown 0.35s;
+     margin: 0;
+     margin-top: 7px;
+     top: 0;
+     padding: 0.5vw 1vw 0.5vw 1vw;
+     background: rgb(60, 60, 60);
+     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+     border-radius: 2.5em;
+ }
+
+ .mobileNavContainer {
+     display: none;
+ }
+
+ .topNav a {
+     color: rgb(255, 255, 255);
+     padding: 0.4vw 0.95vw;
+     text-decoration: none;
+     font-size: 17px;
+     word-wrap: break-word;
+ }
+
+ .topNav a:hover {
+     color: #a1b8de;
+ }
+
+ .topNav a.active {
+     color: #428BFF;
+ }
+
+
+ ul {
+     padding-inline-start: 0;
+ }
+
+
+ /* tablet */
+ @media all and (max-width: 950px) and (min-width: 600px) {
+
+     .topNav a {
+         font-size: 2vw;
+     }
+     .topNav {
+        /* overflow-x: scroll; */
+        overflow-y: hidden;
+     }
+ }
+
+
+ /* smartphone */
+ @media all and (max-width: 600px) and (min-width: 280px) {
+
+     .topNav {
+         display: none;
+     }
+ }

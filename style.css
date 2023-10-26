@@ -1,5 +1,9 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   div {
     animation: fadeInUp ease 1s;
     animation-iteration-count: 1;
@@ -10,6 +14,11 @@
     animation: fadeInUp ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+
+
+  #exit {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
 
   @keyframes fadeIn {
@@ -36,6 +45,18 @@
     }
   }
 
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
   @keyframes zoomIn {
     from {
       opacity: 0;
@@ -47,88 +68,59 @@
     }
   }
 
+  @keyframes zoomOut {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes backgroundMotion {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
   .zoomIn {
     animation-name: zoomIn;
   }
+
   .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
+
   .animate__fadeInUp {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
+  }
+
+  .animate__fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
   }
 
   @keyframes spin {
     0% {
       transform: translate(-50%, -50%) rotate(0deg);
     }
+
     100% {
       transform: translate(-50%, -50%) rotate(360deg);
     }
   }
-  
+
   /* <!-- Animation Load in --> */
-
-
-  /* <!-- Navbar --> */
-
-  .topNav {
-    overflow: hidden;
-    text-align: center;
-    background-color: #262626;
-  }
-
-
-  #navHeader.sticky{
-    position: fixed;
-    top: 0.5vw;
-    left: 0;
-    right: 0;
-    width: fit-content;
-    margin: auto;
-    z-index: 99;
-  }
-  #topNav.sticky{
-    animation: fadeInUp 0.2s;
-    margin: 0;
-    top: 0;
-    padding: 0.5vw 1vw 0.5vw 1vw;
-    background: rgb(60, 60, 60);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    border-radius: 2.5em;
-  }
-  .navbarOffsetMargin {
-    padding-top: 4vw;
-}
-
-  .mobileNavContainer {
-    display: none;
-  }
-
-  .topNav a {
-    color: rgb(255, 255, 255);
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    word-wrap: break-word;
-  }
-
-  .topNav a:hover {
-    color: #a1b8de;
-  }
-
-  .topNav a.active {
-    color: #428BFF;
-  }
-
-
-  ul {
-    padding-inline-start: 0;
-  }
-
-  /* <!-- Navbar --> */
-
+  
 
   /* ===== Scrollbar CSS ===== */
   * {
@@ -166,10 +158,27 @@
     text-decoration: none;
     /** TEXT GRADIENT */
     color: #8d8d8d;
-    background-image: -webkit-linear-gradient(90deg, #8d8d8d  0%, #ffffff 51%);
+    background-image: -webkit-linear-gradient(90deg, #b1b1b1 0%, #ffffff 80%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+
+  #landing {
+    background-image: url('landing.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    padding: 5.5vw;
+    animation: backgroundMotion 60s ease infinite;
+  }
+
+  #landing h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
   }
 
   #fullscreen {
@@ -194,6 +203,12 @@
 
   #fullscreen iframe {
     overflow: hidden;
+  }
+
+  #fullscreen.exit-animation {
+    animation: zoomOut ease-out 0.35s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
 
   body.no-scroll {
@@ -238,7 +253,6 @@
     background: #262626;
     color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
-    height: 100%;
   }
 
   body h1 {
@@ -287,6 +301,48 @@
     border-radius: 2.5em;
     min-width: 240px;
   }
+
+  /* .button {
+    cursor: pointer;
+    position: relative;
+    background: #428BFF;
+    padding: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 2.5em;
+    overflow: hidden;
+    --sheenX: 0;
+    --sheenY: 0;
+  } */
+
+  /* .perspective-container {
+    perspective: 800px;
+  } */
+
+  .button {
+    background-color: #428BFF;
+    border-radius: 10em;
+    background-size: cover;
+    box-shadow: 0 0 140px 10px rgba(0, 0, 0, .5);
+    position: relative;
+    height: 4em;
+    width: 12em;
+    overflow: hidden;
+  }
+
+  /* .shiny.smooth-transition {
+    transition: transform 0.5s ease, --sheenX 0.5s ease, --sheenY 0.5s ease;
+  }
+
+  .button::after {
+    content: "";
+    position: absolute;
+    top: -250px;
+    right: -250px;
+    bottom: -250px;
+    left: -250px;
+    background: linear-gradient(217deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.25) 45%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(var(--sheenX)) translateY(var(--sheenY));
+  } */
 
   .column {
     color: white;
@@ -349,15 +405,9 @@
     text-align: center;
     padding: 0.5vw;
     width: 17.5em;
-    margin: auto;
-  }
-
-  #csBenchGallery {
-    max-width: 63%;
-  }
-
-  #knifeHandleGallery {
-    max-width: 35%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 2vw auto 0.1vw auto;
   }
 
 
@@ -425,19 +475,12 @@
     }
 
     .header {
-      font-size: 8vw;
+      font-size: 5vw;
     }
 
-    .topNav {
-      display: block;
-    }
-
-    .topNav a {
-      font-size: 3.5vw;
-    }
 
     body h1 {
-      font-size: 2.5em;
+      font-size: 3vw;
     }
 
     .column {
@@ -486,16 +529,8 @@
     }
 
     .bottomInfo {
-      padding: 3px;
+      padding: 1vw;
       font-size: 2.2vw;
-    }
-
-    #csBenchGallery {
-      max-width: 100%;
-    }
-
-    #knifeHandleGallery {
-      max-width: 100%;
     }
 
   }
@@ -504,10 +539,6 @@
   @media all and (max-width: 600px) and (min-width: 280px) {
     .sectionBox ul li label {
       font-size: 2.5vw;
-    }
-
-    .topNav {
-      display: none;
     }
 
     .header {
@@ -552,49 +583,10 @@
       width: 60%;
     }
 
-    .headshot {
-      display: inline-block;
-      float: none;
-      width: 55%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 0;
-    }
-
-    .headshotText {
-      font-size: 4.25vw;
-    }
-
     .brSpacer {
       height: 0px;
     }
 
-
-    #csBenchGallery {
-      max-width: 100%;
-    }
-
-    #knifeHandleGallery {
-      max-width: 100%;
-    }
-
-    .mySlides {
-      pointer-events: none;
-    }
-
-    .prev,
-    .next {
-      background-color: rgba(0, 0, 0, 0);
-
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-    }
-
-    .dot {
-      display: none;
-    }
 
     .imageLink {
       inline-size: 35%;

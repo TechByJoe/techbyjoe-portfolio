@@ -1,76 +1,153 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="imageGallery.css">
-<link rel="stylesheet" href="mobileNav.css">
-<link rel="icon" type="image/png" href="favicon.png">
 
-<div id="fullscreen">
-  <div id="exit" onclick="closeFullscreen()">Exit</div>
-</div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="desktopNav.css">
+  <link rel="stylesheet" href="mobileNav.css">
+</head>
 
-<nav id="mobileNavHeader">
-  <h1 class="header" onclick="location.href='index.html';" style="color: rgb(255, 255, 255); font-weight: bolder;">
-    <a class="header-link" href="index.html">Tech By Joe</a>
-  </h1>
-  <h1 class="designPortfolio">Web Design Portfolio</h1>
-  <nav class="mobileNavContainer" onclick="openNav()">
-    <nav>Web Design Portfolio</nav>
-    <nav class="arrowContainer">
-      <nav class="arrowIcon"></nav>
-    </nav>
 
-    <nav id="mobileNavOverlay" class="overlay">
-      <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-        <a href="/">About</a>
-        <a href="services.html">Services</a>
-        <a href="sustainability_organization.html">Sustainability Organization</a>
-        <a href="mechanical_engineer_portfolio.html">Mechanical Engineer Portfolio</a>
-      </div>
+<header style="margin:0; padding:0;">
+  <nav id="mobileNavHeader">
+    <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
+      <a class="header-link" href="#">Tech By Joe</a>
+    </h1>
+    <h1 class="designPortfolio">Web Design Portfolio</h1>
+    <nav class="mobileNavContainer" onclick="openNav()">
+      <nav>Web Design Portfolio</nav>
+      <nav class="arrowContainer">
+        <nav class="arrowIcon"></nav>
+      </nav>
+
+      <nav id="mobileNavOverlay" class="overlay">
+        <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#">About</a>
+          <a href="#sustainability_organization">Sustainability Organization</a>
+          <a href="#mechanical_engineer_portfolio">Mechanical Engineer Portfolio</a>
+          <a href="#mechanical_engineer_portfolio" onclick="closeNav()">Get in Touch</a>
+        </div>
+      </nav>
     </nav>
   </nav>
-</nav>
 
-<header id="navHeader">
-  <ul class="topNav" id="topNav">
-    <a class="page active" href="index.html">About</a>
-    <a class="page" href="services.html">My Services</a>
-    <a class="page" href="sustainability_organization.html">Sustainability Organization</a>
-    <a class="page" href="mechanical_engineer_portfolio.html">Mechanical Engineer Portfolio</a>
-  </ul>
+  <header id="navHeader">
+    <div id="navContainer">
+      <ul class="topNav" id="topNav">
+        <a style="cursor: pointer;" onclick="scrollToTarget('mobileNavHeader')">About</a>
+        <a style="cursor: pointer;" onclick="scrollToTarget('sustainability_organization')">Sustainability
+          Organization</a>
+        <a style="cursor: pointer;" onclick="scrollToTarget('mechanical_engineer_portfolio')">Mechanical
+          Engineer Portfolio</a>
+        <a style="cursor: pointer;" onclick="scrollToTarget('mechanical_engineer_portfolio')">Get in Touch</a>
+      </ul>
+    </div>
+  </header>
+
+  <!-- <main id="landing" class="sectionBox">
+    <h1>Create something amazing for your business</h1>
+  </main>
+   -->
 </header>
 
-<!-- Navbar  -->
+<body>
+  <div id="fullscreen">
+    <div id="exit" onclick="closeFullscreen()">Exit</div>
+  </div>
 
-<div id="spacer"></div>
-
-<div class="sectionBox">
-  <h2 style="padding: 0px; margin: 0px;">About</h2>
-
-  <div class="logoColumn">
-    <img class="logo" src="images/logo.png">
-    <br>
-    <div class="logoText">
+  <!-- Sections -->
+  <div class="sectionBox" id="home">
+    <h2 style="padding: 0px; margin: 0px;">About</h2>
+    <div class="logoColumn">
+      <img class="logo" src="images/logo.png">
       <br>
-      As a passionate and dedicated web designer based in New Jersey, I specialize in creating visually appealing and
-      user-friendly websites that deliver exceptional digital experiences. With additional expertise in graphic design,
-      I ensure a cohesive visual presence across all aspects of your brand. Let's collaborate to maximize your online
-      potential and bring your ideas to life. Get in touch, and let's create something amazing for your business.
+      <div class="textBox">
+        <br>
+        As a passionate and dedicated web designer based in New Jersey, I specialize in creating visually appealing and
+        user-friendly websites that deliver exceptional digital experiences. With additional expertise in graphic
+        design,
+        I ensure a cohesive visual presence across all aspects of your brand. Let's collaborate to maximize your online
+        potential and bring your ideas to life. Get in touch, and let's create something amazing for your business.
+      </div>
     </div>
   </div>
 
-</div>
+  <br>
 
-<br>
+  <div class="sectionBox" id="services">
+    <h2 style="padding: 0px; margin: 0px;">My Services</h2>
+    <div class="textBox">
+      Maximize your business potential with my comprehensive services, designed to enhance your digital presence and
+      streamline customer interactions. I specialize in professional web design, graphic design, and custom software
+      solutions. Based in New Jersey, my expertise is dedicated to showcasing your best work and providing a seamless,
+      efficient experience for your customers. Custom pricing plans are available, tailored to meet your specific
+      requirements and budget. For more details and to explore the possibilities of collaboration, don't hesitate to get
+      in touch. Let's optimize your business for success.
+    </div>
+  </div>
+
+  <br>
+
+  <div class="sectionBox" id="sustainability_organization">
+    <h2 style="padding: 0px; margin: 0px;">Sustainability Organization</h2>
+    <div class="textBox">
+      This client needed to build a brand but didn't know where to start. With an outdated website and a mission
+      centered
+      around sustainability, they sought a partner who could establish their digital presence while creating a cohesive
+      brand
+      identity. In response to their needs, I designed Gaia's logo, promotional banners, and marketing materials, in
+      addition to crafting their current website. The result is a compelling online platform that reflects Gaia's
+      commitment to the environment and empowers their vision for a greener future.
+    </div>
+  </div>
+
+  <br>
+
+  <div class="imageContainer">
+    <img class="image" src="images/gaia.jpg">
+    <div class="perspective-container">
+      <div id="viewWebsite" onclick="openFullscreen('https:\/\/gaiacompetition.com')" class="sectionBox shinys ">View
+        Website
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="sectionBox" id="mechanical_engineer_portfolio">
+    <h2 style="padding: 0px; margin: 0px;">Mechanical Engineer Portfolio</h2>
+    <div class="textBox">
+      For this client, my focus was to effectively showcase their engineering achievements through a compelling online
+      portfolio highlighting their expertise. Additionally, I designed a unique monogram and crafted a custom email
+      signature that that captured their professional identity. The result was a seamless fusion of design and
+      engineering excellence, leaving a lasting impression on recruiters and industry peers alike.
+    </div>
+  </div>
+
+  <br>
+
+  <div class="imageContainer">
+    <img class="image" src="images/mt_portfolio.jpg">
+    <div id="viewWebsite" onclick="openFullscreen('https:\/\/marktarazi.com')" class="sectionBox shiny">View Website
+    </div>
+  </div>
+
+</body>
 
 <script type="text/javascript" src="scripts.js"></script>
 
-<br>
 
 <div id='bottomInfo' class="sectionBox">
-  <div>Email: <a href="mailto:joe@techbyjoe.co" style="color:rgb(255, 255, 255)">Joe@techbyjoe.co </a> </div>
+  <div>Get in touch: <a href="mailto:joe@techbyjoe.co" style="color:rgb(255, 255, 255)">Joe@techbyjoe.co </a> </div>
 </div>
 
+
+<!-- <div class="sectionBox"> 
+  <h2 style="padding: 0px; margin: 0px;"">Contact Me</h2>
+</div> -->
+
 <br>
+
+</html>
