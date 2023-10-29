@@ -623,6 +623,7 @@
 
     #landing {
       padding-bottom: 5.5vw;
+      background-attachment: fixed;
       height: 77vh;
       display: flex;
       flex-direction: column;
