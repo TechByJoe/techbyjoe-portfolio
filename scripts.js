@@ -11,49 +11,48 @@ function closeNav() {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Mobile Navigation Sticky
-  let navbarMobile = document.getElementById("mobileNavHeader");
-  let navPosMobile = navbarMobile.getBoundingClientRect().top;
-  let spacerMobile = document.createElement('div'); // Create a new spacer element
-  spacerMobile.style.height = `${navbarMobile.offsetHeight}px`; // Set its height
-  spacerMobile.style.transition = "transform 0.3s ease"; // Add a CSS transition for smoothness using the transform property
+  // let navbarMobile = document.getElementById("mobileNavHeader");
+  // let navPosMobile = navbarMobile.getBoundingClientRect().top;
+  // let spacerMobile = document.createElement('div'); // Create a new spacer element
+  // spacerMobile.style.height = `${navbarMobile.offsetHeight}px`; // Set its height
+  // spacerMobile.style.transition = "transform 0.3s ease"; // Add a CSS transition for smoothness using the transform property
 
-  if (window.screen.width <= 600) {
-    let isMobileSticky = false;
+  // if (window.screen.width <= 600) {
+  //   let isMobileSticky = false;
 
-    window.addEventListener("scroll", e => {
-      let scrollPosMobile = window.scrollY;
-      if (scrollPosMobile > navPosMobile - 10) {
-        if (!isMobileSticky) {
-          setTimeout(() => {
-            navbarMobile.classList.add('sticky');
-            // Insert the spacer
-            spacerMobile.textContent = '';
-            navbarMobile.parentNode.insertBefore(spacerMobile, navbarMobile);
-          }, 100); // Adjust the delay as needed
-          isMobileSticky = true;
-        }
-      } else {
-        if (isMobileSticky) {
-          setTimeout(() => {
-            navbarMobile.classList.remove('sticky');
-            if (spacerMobile.parentNode === navbarMobile.parentNode) {
-              spacerMobile.remove(); // Remove the spacer
-            }
-          }, 100); // Adjust the delay as needed
-          isMobileSticky = false;
-        }
-      }
-    });
-  }
+  //   window.addEventListener("scroll", e => {
+  //     let scrollPosMobile = window.scrollY;
+  //     if (scrollPosMobile > navPosMobile - 10) {
+  //       if (!isMobileSticky) {
+  //         setTimeout(() => {
+  //           navbarMobile.classList.add('sticky');
+  //           // Insert the spacer
+  //           spacerMobile.textContent = '';
+  //           navbarMobile.parentNode.insertBefore(spacerMobile, navbarMobile);
+  //         }, 100); // Adjust the delay as needed
+  //         isMobileSticky = true;
+  //       }
+  //     } else {
+  //       if (isMobileSticky) {
+  //         setTimeout(() => {
+  //           navbarMobile.classList.remove('sticky');
+  //           if (spacerMobile.parentNode === navbarMobile.parentNode) {
+  //             spacerMobile.remove(); // Remove the spacer
+  //           }
+  //         }, 100); // Adjust the delay as needed
+  //         isMobileSticky = false;
+  //       }
+  //     }
+  //   });
+  // }
 
-  // Desktop Navigation Sticky
-  let navbar = document.getElementById("navHeader");
-  let topNav = document.getElementById("topNav");
-  let spacer = document.createElement('div'); // Create a single spacer element
-  spacer.style.transition = "transform 0.3s ease"; // Add a CSS transition for smoothness using the transform property
-  spacer.style.height = "4vw";
-
+  // Desktop Navigation Sticky\
   if (window.screen.width > 600) {
+    let navbar = document.getElementById("navHeader");
+    let topNav = document.getElementById("topNav");
+    let spacer = document.createElement('div'); // Create a single spacer element
+    spacer.style.transition = "transform 0.3s ease"; // Add a CSS transition for smoothness using the transform property
+    spacer.style.height = "4vw";
     let isDesktopSticky = false;
 
     window.addEventListener("scroll", e => {
@@ -107,10 +106,6 @@ function scrollToTarget(targetId) {
       top: targetPosition,
       behavior: 'smooth' // 'auto' or 'smooth' for scrolling behavior
     });
-    if (window.screen.width <= 600) {
-      console.log("this should run closeNav()...")
-      document.getElementById("mobileNavOverlay").style.height = "0%";
-    }
   }
 }
 

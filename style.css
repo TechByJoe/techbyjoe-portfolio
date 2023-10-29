@@ -16,7 +16,7 @@
     animation-fill-mode: forwards;
   }
 
-  #mobileNavHeader h1{
+  #mobileNavHeader h1 {
     transition: font-size 0.3s;
   }
 
@@ -85,17 +85,17 @@
 
   @keyframes backgroundMotion {
     0% {
-      background-position: 50% 85%;
+      background-position: 50% 83%;
       background-size: 100%;
     }
-  
+
     50% {
       background-position: 50% 67%;
       background-size: 115%;
     }
 
     100% {
-      background-position: 50% 85%;
+      background-position: 50% 83%;
       background-size: 100%;
     }
   }
@@ -172,12 +172,13 @@
     background-image: url('landing.jpg');
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: 50% 95%;
     text-align: center;
-    padding: 5.5vw;
+    padding: 7.5vw;
     padding-bottom: 4.5vw;
-    animation: backgroundMotion 40s linear infinite;
+    animation: backgroundMotion 80s linear infinite;
     transition: all 0.3s;
+    min-height: 90%;
   }
 
   #landing-text {
@@ -190,7 +191,6 @@
     margin-top: 0.8em;
     margin-bottom: 0.8em;
     align-items: center;
-    flex-wrap: nowrap;
     justify-content: center;
   }
 
@@ -200,7 +200,7 @@
     font-weight: 300;
     transition: color 0.3s;
   }
-  
+
   #cta {
     position: relative;
     padding: 0.5vw 1.5vw;
@@ -218,19 +218,28 @@
     font-size: 105%;
   }
 
+  #explore{
+    position: absolute;
+    font-size: 4vw;
+    bottom: 5vw;
+    margin: 5vw;
+  }
+
   @keyframes glow {
     0% {
       box-shadow: 0 0 0.5em rgba(52, 152, 219, 0.7);
     }
+
     50% {
       box-shadow: 0 0 1.25em rgba(52, 152, 219, 0.9);
     }
+
     100% {
       box-shadow: 0 0 0.5em rgba(52, 152, 219, 0.7);
     }
   }
-  
-  
+
+
   /* .word {
     margin-left: 14px;
     box-sizing: border-box;
@@ -463,21 +472,21 @@
     }
 
   }
-  
+
   /* small screen */
-  @media all and (max-width: 1200px) and (min-width: 950px) {
+  @media all and (max-width: 1170px) and (min-width: 950px) {
 
     @keyframes backgroundMotion {
       0% {
         background-position: 50% 40em;
         background-size: 100%;
       }
-    
+
       50% {
         background-position: 50% 52em;
         background-size: 115%;
       }
-  
+
       100% {
         background-position: 50% 40em;
         background-size: 100%;
@@ -488,22 +497,22 @@
   /* tablet */
   @media all and (max-width: 950px) and (min-width: 600px) {
 
-  @keyframes backgroundMotion {
-    0% {
-      background-position: 50% 35em;
-      background-size: 100%;
-    }
-  
-    50% {
-      background-position: 50% 45em;
-      background-size: 115%;
-    }
+    @keyframes backgroundMotion {
+      0% {
+        background-position: 50% 35em;
+        background-size: 100%;
+      }
 
-    100% {
-      background-position: 50% 35em;
-      background-size: 100%;
+      50% {
+        background-position: 50% 45em;
+        background-size: 115%;
+      }
+
+      100% {
+        background-position: 50% 35em;
+        background-size: 100%;
+      }
     }
-  }
 
     .imageContainer {
       width: 100%;
@@ -581,18 +590,18 @@
 
     @keyframes backgroundMotion {
       0% {
-        background-position: 50% 49em;
-        background-size: 100%;
+        background-position: 80% 52em;
+        background-size: 280%;
       }
-    
+
       50% {
-        background-position: 50% 58em;
-        background-size: 115%;
+        background-position: 95% 37em;
+        background-size: 240%;
       }
-  
+
       100% {
-        background-position: 50% 49em;
-        background-size: 100%;
+        background-position: 80% 52em;
+        background-size: 280%;
       }
     }
 
@@ -608,15 +617,20 @@
       display: block;
     }
 
-    #landing-text{
-      font-size: 1.5em;
+    #landing-text {
+      font-size: 2em;
     }
 
-    #landing{
+    #landing {
       padding-bottom: 5.5vw;
+      height: 77vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    #cta{
+    #cta {
       font-size: 1.2em;
       padding: 1vw 2.5vw;
     }
