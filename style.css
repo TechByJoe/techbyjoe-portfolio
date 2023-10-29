@@ -587,6 +587,9 @@
 
   /* smartphone */
   @media all and (max-width: 600px) and (min-width: 280px) {
+    body{
+      font-family: 'Poppins', system-ui, -apple-system;
+    }
 
     @keyframes backgroundMotion {
       0% {
@@ -622,9 +625,9 @@
     }
 
     #landing {
-      padding-bottom: 5.5vw;
+      padding: 6vw 4.5vw 6vw;
       background-attachment: fixed;
-      height: 76svh;
+      height: 78svh;
       display: flex;
       flex-direction: column;
       justify-content: center;
