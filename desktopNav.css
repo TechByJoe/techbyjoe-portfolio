@@ -1,7 +1,7 @@
- /* Add smooth transition for sticky navigation bar */
+ /* Add smooth transition for sticky navigation bar */ 
  #navHeader,
  #topNav {
-     transition: all 0.3s ease-in;
+     transition: all 0.3s ease-in-out;
  }
 
  #navContainer{
@@ -33,6 +33,14 @@
      border-radius: 2.5em;
  }
 
+  .sticky{
+    transition: transform 0.3s ease;
+ }
+
+ .sticky.transformed {
+    transform: translateY(-100%);
+  }
+
  .mobileNavContainer {
      display: none;
  }
@@ -43,6 +51,7 @@
      text-decoration: none;
      font-size: 17px;
      word-wrap: break-word;
+     transition: color 0.3s;
  }
 
  .topNav a:hover {

@@ -10,12 +10,13 @@
 
 
 <header style="margin:0; padding:0;">
+  
   <nav id="mobileNavHeader">
     <h1 class="header" style="color: rgb(255, 255, 255); font-weight: bolder;">
       <a class="header-link" href="#">Tech By Joe</a>
     </h1>
-    <h1 class="designPortfolio">Web Design Portfolio</h1>
-    <nav class="mobileNavContainer" onclick="openNav()">
+    <h1 class="subHeader">Web & Graphic Designer</h1> 
+    <!-- <nav class="mobileNavContainer" onclick="openNav()">
       <nav>Web Design Portfolio</nav>
       <nav class="arrowContainer">
         <nav class="arrowIcon"></nav>
@@ -24,14 +25,14 @@
       <nav id="mobileNavOverlay" class="overlay">
         <a href="javascript:closeNav()" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-          <a href="#">About</a>
-          <a href="#sustainability_organization">Sustainability Organization</a>
-          <a href="#mechanical_engineer_portfolio">Mechanical Engineer Portfolio</a>
-          <a href="#mechanical_engineer_portfolio" onclick="closeNav()">Get in Touch</a>
+          <a href="#" onclick="javascript:scrollToTarget('mobileNavHeader');closeNav();">About</a>
+          <a href="#sustainability_organization" onclick="javascript:scrollToTarget('sustainability_organization'); closeNav();">Sustainability Organization</a>
+          <a href="#mechanical_engineer_portfolio" onclick="javscript:scrollToTarget('mechanical_engineer_portfolio'); closeNav();">Mechanical Engineer Portfolio</a>
+          <a href="#mechanical_engineer_portfolio" onclick="javascript:scrollToTarget('mechanical_engineer_portfolio'); closeNav();">Get in Touch</a>
         </div>
       </nav>
-    </nav>
-  </nav>
+    </nav> -->
+  </nav> 
 
   <header id="navHeader">
     <div id="navContainer">
@@ -41,22 +42,31 @@
           Organization</a>
         <a style="cursor: pointer;" onclick="scrollToTarget('mechanical_engineer_portfolio')">Mechanical
           Engineer Portfolio</a>
-        <a style="cursor: pointer;" onclick="scrollToTarget('mechanical_engineer_portfolio')">Get in Touch</a>
+        <a style="cursor: pointer;" onclick="scrollToTarget('bottomInfo')">Get in Touch</a>
       </ul>
     </div>
   </header>
 
-  <!-- <main id="landing" class="sectionBox">
-    <h1>Create something amazing for your business</h1>
+  <main id="landing" class="sectionBox">
+    <div id="landing-text">
+      Create something amazing for your business
+        <!-- <div class="sliding-words">
+          <div class="word">Business</div>
+          <div class="word">Portfolio</div>
+          <div class="word">Organization</div>
+          <div class="word">Business</div>
+          <div class="word">Project</div>
+        </div> -->
+      </div>
+    </div>
+    <a id="cta" class="sectionBox" href="mailto:joe@techbyjoe.co">It all starts with an email</a>
   </main>
-   -->
+
+  <br>
+
 </header>
 
 <body>
-  <div id="fullscreen">
-    <div id="exit" onclick="closeFullscreen()">Exit</div>
-  </div>
-
   <!-- Sections -->
   <div class="sectionBox" id="home">
     <h2 style="padding: 0px; margin: 0px;">About</h2>
@@ -106,12 +116,12 @@
   <br>
 
   <div class="imageContainer">
-    <img class="image" src="images/gaia.jpg">
-    <div class="perspective-container">
-      <div id="viewWebsite" onclick="openFullscreen('https:\/\/gaiacompetition.com')" class="sectionBox shinys ">View
-        Website
-      </div>
+    <!-- <div class="perspective-container"> -->
+    <img class="image shiny" src="images/gaia.jpg">
+    <div id="viewWebsite" onclick="openFullscreen('https:\/\/gaiacompetition.com')" class="sectionBox">View
+      Website
     </div>
+  </div>
   </div>
 
   <br>
@@ -129,10 +139,13 @@
   <br>
 
   <div class="imageContainer">
-    <img class="image" src="images/mt_portfolio.jpg">
-    <div id="viewWebsite" onclick="openFullscreen('https:\/\/marktarazi.com')" class="sectionBox shiny">View Website
+    <!-- <div class="perspective-container"> -->
+    <img class="image shiny" src="images/mt_portfolio.jpg">
+    <div id="viewWebsite" onclick="openFullscreen('https:\/\/marktarazi.com')" class="sectionBox">View Website
     </div>
+    <!-- </div> -->
   </div>
+
 
 </body>
 
@@ -140,7 +153,9 @@
 
 
 <div id='bottomInfo' class="sectionBox">
-  <div>Get in touch: <a href="mailto:joe@techbyjoe.co" style="color:rgb(255, 255, 255)">Joe@techbyjoe.co </a> </div>
+  <img class="logo small mobile" src="images/logo.png">
+  <div id="mobileContactInfo">Contact me at <a href="mailto:joe@techbyjoe.co"
+      style="color:rgb(255, 255, 255)">Joe@techbyjoe.co </a> </div>
 </div>
 
 

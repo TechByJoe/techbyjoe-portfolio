@@ -7,10 +7,12 @@
         width: 100%;
         position: relative;
         box-sizing: border-box;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #262626 95%);
-        height: 34vw;
+        height: 22.5vw;
         z-index: 99;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #262626 100%);
+        backdrop-filter: blur(10px);
     }
+
 
     #mobileNavHeader.sticky {
         position: fixed;
@@ -24,8 +26,8 @@
         transition: all 0.3s ease-in;
     }
 
-    .designPortfolio {
-        display: none;
+    .subHeader {
+    display: none;
     }
 
     .mobileNavContainer {
