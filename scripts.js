@@ -123,7 +123,32 @@ function openFullscreen(content) {
 }
 
 //Change theme color on scroll
+// const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+
+// function updateThemeColor() {
+//   const scrollPosition = window.scrollY;
+//   const documentHeight = Math.max(
+//     document.body.scrollHeight,
+//     document.body.offsetHeight,
+//     document.documentElement.clientHeight,
+//     document.documentElement.scrollHeight,
+//     document.documentElement.offsetHeight
+//   );
+
+//   const threshold = 0.7433;
+
+//   if (scrollPosition >= threshold * documentHeight) {
+//     themeColorMetaTag.setAttribute("content", "#262626"); // Change to black
+//   } else {
+//     themeColorMetaTag.setAttribute("content", "#000000"); // Change to default color
+//   }
+// }
+// window.addEventListener('scroll', updateThemeColor);
+// updateThemeColor();
+
 const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+let colorUpdated = false; // Flag to track if the color has been updated
+let thresholdHeight = 0;
 
 function updateThemeColor() {
   const scrollPosition = window.scrollY;
@@ -138,10 +163,16 @@ function updateThemeColor() {
   const threshold = 0.7433;
 
   if (scrollPosition >= threshold * documentHeight) {
-    themeColorMetaTag.setAttribute("content", "#262626"); // Change to black
-  } else {
-    themeColorMetaTag.setAttribute("content", "#000000"); // Change to default color
+    if (!colorUpdated) {
+      themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
+      colorUpdated = true; // Set the flag to true
+      thresholdHeight = scrollPosition; // Store the current threshold height
+    }
+  } else if (scrollPosition <= thresholdHeight) {
+    // Reset the color when scrolling back up to the stored threshold height
+    themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
+    colorUpdated = false; // Reset the flag
   }
 }
+
 window.addEventListener('scroll', updateThemeColor);
-updateThemeColor();
