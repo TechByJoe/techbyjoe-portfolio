@@ -122,25 +122,29 @@ function openFullscreen(content) {
   }
 }
 
+//Change theme color on scroll
+const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
 
+function updateThemeColor() {
+  const scrollPosition = window.scrollY;
+  const documentHeight = Math.max(
+    document.body.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.clientHeight,
+    document.documentElement.scrollHeight,
+    document.documentElement.offsetHeight
+  );
 
+  const threshold = 0.6;
 
-// function closeFullscreen() {
-//   fullscreenContent.innerHTML = '<div id="exit" onclick="closeFullscreen()">Exit</div>'
-//   fullscreenContent.style.display = "none";
-//   document.getElementById("topNav").style.display = "block";
-//   document.body.classList.remove("no-scroll");
-// }
-
-// function hideSpinner() {
-//   document.querySelector('.spinner').style.display = 'none';
-// }
-
-// document.addEventListener('keydown', evt => {
-//   if (evt.key === 'Escape') {
-//     closeFullscreen();
-//   }
-// });
+  if (scrollPosition >= threshold * documentHeight) {
+    themeColorMetaTag.setAttribute("content", "#262626"); // Change to black
+  } else {
+    themeColorMetaTag.setAttribute("content", "#000000"); // Change to default color
+  }
+}
+window.addEventListener('scroll', updateThemeColor);
+updateThemeColor();
 
 
 
