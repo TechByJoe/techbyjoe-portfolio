@@ -272,7 +272,6 @@ body {
   background: #262626;
   color: rgb(255, 255, 255);
   font-family: 'Poppins', sans-serif;
-  margin: 0;
 }
 
 body h1 {
@@ -623,6 +622,10 @@ iframe {
       background-position: 80% 51em;
       background-size: 280%;
     }
+  }
+
+  body{
+    margin: 0;
   }
 
   #content{
