@@ -10,43 +10,21 @@ function closeNav() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
   // Mobile Navigation Sticky
-  // let navbarMobile = document.getElementById("mobileNavHeader");
-  // let navPosMobile = navbarMobile.getBoundingClientRect().top;
-  // let spacerMobile = document.createElement('div'); // Create a new spacer element
-  // spacerMobile.style.height = `${navbarMobile.offsetHeight}px`; // Set its height
-  // spacerMobile.style.transition = "transform 0.3s ease"; // Add a CSS transition for smoothness using the transform property
+  if (window.screen.width <= 600) {
+    let headerText = document.getElementById("headerText");
 
-  // if (window.screen.width <= 600) {
-  //   let isMobileSticky = false;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 100) {
+        headerText.style.fontSize = '0.8em'; // Change to the desired font size
+      } else {
+        headerText.style.fontSize = '1em'; // Return to the initial font size
+      }
+    });
+  }
 
-  //   window.addEventListener("scroll", e => {
-  //     let scrollPosMobile = window.scrollY;
-  //     if (scrollPosMobile > navPosMobile - 10) {
-  //       if (!isMobileSticky) {
-  //         setTimeout(() => {
-  //           navbarMobile.classList.add('sticky');
-  //           // Insert the spacer
-  //           spacerMobile.textContent = '';
-  //           navbarMobile.parentNode.insertBefore(spacerMobile, navbarMobile);
-  //         }, 100); // Adjust the delay as needed
-  //         isMobileSticky = true;
-  //       }
-  //     } else {
-  //       if (isMobileSticky) {
-  //         setTimeout(() => {
-  //           navbarMobile.classList.remove('sticky');
-  //           if (spacerMobile.parentNode === navbarMobile.parentNode) {
-  //             spacerMobile.remove(); // Remove the spacer
-  //           }
-  //         }, 100); // Adjust the delay as needed
-  //         isMobileSticky = false;
-  //       }
-  //     }
-  //   });
-  // }
-
-  // Desktop Navigation Sticky\
+  // Desktop Navigation Sticky
   if (window.screen.width > 600) {
     let navbar = document.getElementById("navHeader");
     let topNav = document.getElementById("topNav");
