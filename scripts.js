@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function scrollToTarget(targetId) {
   var offset = -40;
   if (window.screen.width <= 600) {
-    offset = 0;
+    offset = -50;
   }
 
   var targetElement = document.getElementById(targetId);
