@@ -87,92 +87,97 @@ function scrollToTarget(targetId) {
   }
 }
 
-// Fullscreen 
-function openFullscreen(content) {
-  // if (window.screen.width < 600) {
-  if (window.screen.width > 1) {
-    open(content, '_blank');
-  } else {
-    var fullscreenContent = document.getElementById("fullscreen");
-    fullscreenContent.innerHTML = "";
-
-    var spinner = document.createElement("div");
-    spinner.classList.add("spinner");
-    fullscreenContent.appendChild(spinner);
-
-    var iframe = document.createElement("iframe");
-    iframe.style.border = "none";
-    iframe.src = content;
-    iframe.onload = function () {
-      hideSpinner();
-    };
-    fullscreenContent.appendChild(iframe);
-
-    var exitButton = document.createElement("div");
-    exitButton.id = "exit";
-    exitButton.innerText = "Exit";
-    exitButton.onclick = function () {
-      closeFullscreen();
-    };
-    fullscreenContent.appendChild(exitButton);
-
-    fullscreenContent.style.display = "block";
-    document.getElementById("topNav").style.display = "none";
-    document.body.classList.add("no-scroll");
-  }
+function openInNewTab(content) {
+  open(content, '_blank');
 }
 
-//Change theme color on scroll
-// const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+// Fullscreen 
+// function openFullscreen(content) {
+//   if (window.screen.width < 600) {
+//     var fullscreenContent = document.getElementById("fullscreen");
+//     fullscreenContent.innerHTML = "";
 
-// function updateThemeColor() {
-//   const scrollPosition = window.scrollY;
-//   const documentHeight = Math.max(
-//     document.body.scrollHeight,
-//     document.body.offsetHeight,
-//     document.documentElement.clientHeight,
-//     document.documentElement.scrollHeight,
-//     document.documentElement.offsetHeight
-//   );
+//     var spinner = document.createElement("div");
+//     spinner.classList.add("spinner");
+//     fullscreenContent.appendChild(spinner);
 
-//   const threshold = 0.7433;
+//     var iframe = document.createElement("iframe");
+//     iframe.style.border = "none";
+//     iframe.src = content;
+//     iframe.onload = function () {
+//       hideSpinner();
+//     };
+//     fullscreenContent.appendChild(iframe);
 
-//   if (scrollPosition >= threshold * documentHeight) {
-//     themeColorMetaTag.setAttribute("content", "#262626"); // Change to black
-//   } else {
-//     themeColorMetaTag.setAttribute("content", "#000000"); // Change to default color
+//     var exitButton = document.createElement("div");
+//     exitButton.id = "exit";
+//     exitButton.innerText = "Exit";
+//     exitButton.onclick = function () {
+//       closeFullscreen();
+//     };
+//     fullscreenContent.appendChild(exitButton);
+
+//     fullscreenContent.style.display = "block";
+//     document.getElementById("topNav").style.display = "none";
+//     document.body.classList.add("no-scroll");
 //   }
 // }
-// window.addEventListener('scroll', updateThemeColor);
-// updateThemeColor();
 
-const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
-let colorUpdated = false; // Flag to track if the color has been updated
-let thresholdHeight = 0;
+//Change theme color on scroll
 
-function updateThemeColor() {
-  const scrollPosition = window.scrollY;
-  const documentHeight = Math.max(
-    document.body.scrollHeight,
-    document.body.offsetHeight,
-    document.documentElement.clientHeight,
-    document.documentElement.scrollHeight,
-    document.documentElement.offsetHeight
-  );
+if (window.screen.width < 600) {
+  const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
 
-  const threshold = 0.7433;
+  function updateThemeColor() {
+    const scrollPosition = window.scrollY;
+    const documentHeight = Math.max(
+      document.body.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.clientHeight,
+      document.documentElement.scrollHeight,
+      document.documentElement.offsetHeight
+    );
 
-  if (scrollPosition >= threshold * documentHeight) {
-    if (!colorUpdated) {
-      themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
-      colorUpdated = true; // Set the flag to true
-      thresholdHeight = scrollPosition; // Store the current threshold height
+    const threshold = 0.7433;
+
+    if (scrollPosition >= threshold * documentHeight) {
+      themeColorMetaTag.setAttribute("content", "#262626"); // Change to black
+    } else {
+      themeColorMetaTag.setAttribute("content", "#000000"); // Change to default color
     }
-  } else if (scrollPosition <= thresholdHeight) {
-    // Reset the color when scrolling back up to the stored threshold height
-    themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
-    colorUpdated = false; // Reset the flag
   }
-}
+  window.addEventListener('scroll', updateThemeColor);
+  updateThemeColor();
 
-window.addEventListener('scroll', updateThemeColor);
+
+  //   const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+  //   let colorUpdated = false; // Flag to track if the color has been updated
+  //   let thresholdHeight = 0;
+
+  //   function updateThemeColor() {
+  //     const scrollPosition = window.scrollY;
+  //     const documentHeight = Math.max(
+  //       document.body.scrollHeight,
+  //       document.body.offsetHeight,
+  //       document.documentElement.clientHeight,
+  //       document.documentElement.scrollHeight,
+  //       document.documentElement.offsetHeight
+  //     );
+
+  //     const threshold = 0.7433;
+
+  //     if (scrollPosition >= threshold * documentHeight) {
+  //       if (!colorUpdated) {
+  //         themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
+  //         colorUpdated = true; // Set the flag to true
+  //         thresholdHeight = scrollPosition; // Store the current threshold height
+  //       }
+  //     } else if (scrollPosition <= thresholdHeight) {
+  //       // Reset the color when scrolling back up to the stored threshold height
+  //       themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
+  //       colorUpdated = false; // Reset the flag
+  //     }
+  //   }
+
+  // window.addEventListener('scroll', updateThemeColor);
+}
