@@ -135,7 +135,7 @@ function updateThemeColor() {
     document.documentElement.offsetHeight
   );
 
-  const threshold = 0.99;
+  const threshold = 0.88;
 
   if (scrollPosition >= threshold * documentHeight) {
     themeColorMetaTag.setAttribute("content", "#262626"); // Change to black
