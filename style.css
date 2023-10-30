@@ -469,7 +469,7 @@ iframe {
 }
 
 /* small screens */
-@media all and (max-width: 1250px) and (min-width: 1110px) {
+@media all and (max-width: 1250px) and (min-width: 1150px) {
   @keyframes backgroundMotion {
     0% {
       background-position: 50% 83%;
@@ -488,7 +488,7 @@ iframe {
   }
   
 }
-@media all and (max-width: 1110px) and (min-width: 950px) {
+@media all and (max-width: 1150px) and (min-width: 950px) {
 
   @keyframes backgroundMotion {
     0% {
