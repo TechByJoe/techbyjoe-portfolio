@@ -609,7 +609,7 @@ iframe {
 
   @keyframes backgroundMotion {
     0% {
-      background-position: 80% 48em;
+      background-position: 80% 49em;
       background-size: 280%;
     }
 
@@ -619,7 +619,7 @@ iframe {
     }
 
     100% {
-      background-position: 80% 51em;
+      background-position: 80% 50em;
       background-size: 280%;
     }
   }
@@ -644,7 +644,7 @@ iframe {
 
   #headerText{
     font-size: 1em;
-    transition: font-size ease-in-out 0.75s;
+    transition: font-size cubic-bezier(0.075, 0.82, 0.165, 1) 0.75s;
     margin-bottom: 5vw;
   }
 
@@ -659,7 +659,7 @@ iframe {
   #landing {
     padding: 6vw 4.5vw 6vw;
     background-attachment: fixed;
-    height: 85.5vh;
+    height: 83vh;
     display: flex;
     border-radius: 0 0 2.5em 2.5em;
     flex-direction: column;
