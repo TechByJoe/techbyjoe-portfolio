@@ -149,7 +149,7 @@ if (window.screen.width < 600) {
   }
   window.addEventListener('scroll', updateThemeColor);
   updateThemeColor();
-
+}
 
   //   const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
   //   let colorUpdated = false; // Flag to track if the color has been updated
@@ -181,4 +181,3 @@ if (window.screen.width < 600) {
   //   }
 
   // window.addEventListener('scroll', updateThemeColor);
-}
