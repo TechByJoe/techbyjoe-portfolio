@@ -182,8 +182,8 @@ html {
   -webkit-transition: 1s ease-in-out;
   animation: backgroundMotion 75s linear infinite;
   -webkit-animation: backgroundMotion 75s linear infinite;
-  perspective: 20;
-  -webkit-perspective: 20;
+  perspective: 70;
+  -webkit-perspective: 70;
   backface-visibility: none;
   -webkit-backface-visibility:none; 
 }
