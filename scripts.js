@@ -127,7 +127,7 @@ function openInNewTab(content) {
 
 if (window.screen.width < 600) {
   const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
-  themeColorMetaTag.setAttribute("content", "#262626");
+  themeColorMetaTag.setAttribute("content", "#000000");
 
   function updateThemeColor() {
     const scrollPosition = window.scrollY;
