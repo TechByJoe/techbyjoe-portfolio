@@ -179,7 +179,8 @@ html {
   padding: 7.5vw;
   padding-bottom: 4.5vw;
   animation: backgroundMotion 80s linear infinite;
-  transition: background-size 5s;
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
   /* min-height: 90%; */
 }
 
