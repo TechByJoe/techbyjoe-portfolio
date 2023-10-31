@@ -178,10 +178,10 @@ html {
   text-align: center;
   padding: 7.5vw;
   padding-bottom: 4.5vw;
-  animation: backgroundMotion 80s linear infinite;
+  animation: backgroundMotion 20s linear infinite;
   transition: 1s ease-in-out;
   -webkit-transition: 1s ease-in-out;
-  -webkit-animation: backgroundMotion 80s linear infinite;
+  -webkit-animation: backgroundMotion 20s linear infinite;
   /* min-height: 90%; */
 }
 
@@ -528,11 +528,6 @@ iframe {
       background-position: 50% 40em;
       /* background-size: 100%; */
     }
-  }
-
-  #landing {
-    animation: backgroundMotion 20s linear infinite;
-    -webkit-animation: backgroundMotion 20s linear infinite;
   }
 
   .imageContainer {
