@@ -129,8 +129,7 @@ if (window.screen.width < 600) {
   const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
 
   function updateThemeColor() {
-    themeColorMetaTag.setAttribute("content", "#000000");
-    
+    themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
     const scrollPosition = window.scrollY;
     const documentHeight = Math.max(
       document.body.scrollHeight,

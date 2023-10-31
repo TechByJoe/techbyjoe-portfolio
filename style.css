@@ -476,20 +476,17 @@ iframe {
   @keyframes backgroundMotion {
     0% {
       background-position: 50% 83%;
-      /* background-size: 100%; */
-      scale: (1);
+      background-size: 100%;
     }
   
     50% {
       background-position: 50% 67%;
-      /* background-size: 115%; */
-      scale: (1.15);
+      background-size: 115%;
     }
   
     100% {
       background-position: 50% 83%;
-      /* background-size: 100%; */
-      scale: (1);
+      background-size: 100%;
     }
   }
   
@@ -499,20 +496,17 @@ iframe {
   @keyframes backgroundMotion {
     0% {
       background-position: 50% 46em;
-      /* background-size: 100%; */
-      scale: (1);
+      background-size: 100%;
     }
 
     50% {
       background-position: 50% 58em;
-      /* background-size: 115%; */
-      scale: (1.15);
+      background-size: 115%;
     }
 
     100% {
       background-position: 50% 46em;
-      /* background-size: 100%; */
-      scale: (1);
+      background-size: 100%;
     }
   }
 }
