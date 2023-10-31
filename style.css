@@ -183,7 +183,7 @@ html {
   animation: backgroundMotion 75s linear infinite;
   -webkit-animation: backgroundMotion 75s linear infinite;
   perspective: 1;
-  -webkit-perspective: 1;
+  -webkit-perspective: 35;
   backface-visibility: none;
   -webkit-backface-visibility:none; 
 }
