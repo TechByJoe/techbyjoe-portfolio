@@ -130,24 +130,24 @@ if (window.screen.width < 600) {
 
   function updateThemeColor() {
     themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
-    const scrollPosition = window.scrollY;
-    const documentHeight = Math.max(
-      document.body.scrollHeight,
-      document.body.offsetHeight,
-      document.documentElement.clientHeight,
-      document.documentElement.scrollHeight,
-      document.documentElement.offsetHeight
-    );
+    // const scrollPosition = window.scrollY;
+    // const documentHeight = Math.max(
+    //   document.body.scrollHeight,
+    //   document.body.offsetHeight,
+    //   document.documentElement.clientHeight,
+    //   document.documentElement.scrollHeight,
+    //   document.documentElement.offsetHeight
+    // );
 
-    const threshold = 0.7433;
+    // const threshold = 0.7433;
 
-    if (scrollPosition >= threshold * documentHeight) {
-      themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
-    } else {
-      themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
-    }
+    // if (scrollPosition >= threshold * documentHeight) {
+    //   themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
+    // } else {
+    //   themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
+    // }
   }
-  window.addEventListener('scroll', updateThemeColor);
+  // window.addEventListener('scroll', updateThemeColor);
   updateThemeColor();
 }
 
