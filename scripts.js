@@ -127,6 +127,7 @@ function openInNewTab(content) {
 
 if (window.screen.width < 600) {
   const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+  // themeColorMetaTag.setAttribute("content", "#262626");
 
   function updateThemeColor() {
     const scrollPosition = window.scrollY;
@@ -141,9 +142,9 @@ if (window.screen.width < 600) {
     const threshold = 0.7433;
 
     if (scrollPosition >= threshold * documentHeight) {
-      themeColorMetaTag.setAttribute("content", "#262626"); // Change to black
+      themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
     } else {
-      themeColorMetaTag.setAttribute("content", "#000000"); // Change to default color
+      themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
     }
   }
   window.addEventListener('scroll', updateThemeColor);
