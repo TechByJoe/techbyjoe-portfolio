@@ -182,7 +182,8 @@ html {
   transition: 1s ease-in-out;
   -webkit-transition: 1s ease-in-out;
   -webkit-animation: backgroundMotion 20s linear infinite;
-  /* min-height: 90%; */
+  -webkit-perspective:none;
+  -webkit-backface-visibility:none; 
 }
 
 #landing-text {
