@@ -515,17 +515,17 @@ iframe {
   @keyframes backgroundMotion {
     0% {
       background-position: 50% 40em;
-      background-size: 100%;
+      /* background-size: 100%; */
     }
 
     50% {
       background-position: 50% 47em;
-      background-size: 115%;
+      /* background-size: 115%; */
     }
 
     100% {
       background-position: 50% 40em;
-      background-size: 100%;
+      /* background-size: 100%; */
     }
   }
 
