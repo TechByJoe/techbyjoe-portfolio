@@ -530,6 +530,11 @@ iframe {
     }
   }
 
+  #landing {
+    animation: backgroundMotion 20s linear infinite;
+    -webkit-animation: backgroundMotion 20s linear infinite;
+  }
+
   .imageContainer {
     width: 100%;
   }
