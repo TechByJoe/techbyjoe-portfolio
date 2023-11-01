@@ -173,7 +173,7 @@ html {
 #landing {
   background-image: url('landing.jpg');
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: 50% 95%;
   text-align: center;
   padding: 7.5vw;
@@ -184,6 +184,8 @@ html {
   -webkit-animation: backgroundMotion 75s linear infinite;
   backface-visibility: none;
   -webkit-backface-visibility:none; 
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 #landing-text {
@@ -328,16 +330,10 @@ iframe {
   min-width: 240px;
 }
 
-/* .button {
-    cursor: pointer;
-    position: relative;
-    background: #428BFF;
-    padding: 30px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    border-radius: 2.5em;
-    overflow: hidden;
-  } */
-
+#content{
+  max-width: 75vw;
+  margin: 0 auto;
+}
 
 .button {
   background-color: #428BFF;
@@ -427,6 +423,14 @@ iframe {
 
 
 /* Joey Giordano */
+
+@media (prefers-reduced-motion: reduce) {
+  #landing {
+    animation: none;
+    -webkit-animation: none;
+  }
+}
+
 @media all and (min-width: 850px) {
 
   .header {
@@ -466,6 +470,8 @@ iframe {
     font-size: 1.25vw;
     padding: 0.5vw;
     padding-left: 0.75vw;
+    bottom: 1vw;
+    right: 1vw;
     padding-right: 0.75vw;
   }
 
