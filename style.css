@@ -85,17 +85,17 @@ div {
 
 @keyframes backgroundMotion {
   0% {
-    background-position: 50% 85%;
+    background-position: 50% 72%;
     background-size: 100%;
   }
 
   50% {
-    background-position: 50% 67%;
+    background-position: 50% 60%;
     background-size: 115%;
   }
 
   100% {
-    background-position: 50% 85%;
+    background-position: 50% 72%;
     background-size: 100%;
   }
 }
@@ -183,7 +183,7 @@ html {
   animation: backgroundMotion 75s linear infinite;
   -webkit-animation: backgroundMotion 75s linear infinite;
   backface-visibility: none;
-  -webkit-backface-visibility:none; 
+  -webkit-backface-visibility:none;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
@@ -331,7 +331,11 @@ iframe {
 }
 
 #content{
-  max-width: 75vw;
+  margin: 0 auto;
+}
+
+#content .sectionBox{
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -470,8 +474,8 @@ iframe {
     font-size: 1.25vw;
     padding: 0.5vw;
     padding-left: 0.75vw;
-    bottom: 1vw;
-    right: 1vw;
+    /* bottom: 1vw; */
+    /* right: 1vw; */
     padding-right: 0.75vw;
   }
 
