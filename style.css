@@ -377,13 +377,6 @@ iframe {
   transform: translateX(var(--sheenX)) translateY(var(--sheenY));
 } */
 
-.imageLink {
-  inline-size: 10vw;
-  border-radius: 10%;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 #aboutContainer {
   display: flex;
   align-items: center;
@@ -396,18 +389,6 @@ iframe {
   margin: 1.25vw 2vw 0.5vw 1vw;
   /* shape-outside: circle(); */
   justify-content: flex-start;
-}
-
-.logoColumn {
-  color: white;
-  display: inline;
-  height: min-content;
-  position: relative;
-  vertical-align: middle;
-}
-
-.logoText {
-  font-size: 1.4vw;
 }
 
 #viewWebsite {
@@ -531,19 +512,6 @@ iframe {
     font-size: 3vw;
   }
 
-  .column {
-    width: 70%;
-  }
-
-  .columnText {
-    color: white;
-    font-style: italic;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    width: 60%;
-  }
-
   #viewWebsite {
     right: 2vw;
     bottom: 2.75vw;
@@ -649,30 +617,6 @@ iframe {
 
   body h1 {
     font-size: 1.5em;
-  }
-
-  .column {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .columnText {
-    color: white;
-    font-style: italic;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    width: 60%;
-  }
-
-  .brSpacer {
-    height: 0px;
-  }
-
-
-  .imageLink {
-    inline-size: 35%;
-    border-radius: 1.5em;
   }
 
   #viewWebsite {
