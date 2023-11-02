@@ -1,15 +1,54 @@
-fullscreenContent = document.getElementById("fullscreen");
-
 //mobile navigation animation
-function openNav() {
-  document.getElementById("mobileNavOverlay").style.height = "100%";
-}
+// function openNav() {
+//   document.getElementById("mobileNavOverlay").style.height = "100%";
+// }
 
-function closeNav() {
-  document.getElementById("mobileNavOverlay").style.height = "0%";
-}
+// function closeNav() {
+//   document.getElementById("mobileNavOverlay").style.height = "0%";
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  var words = ['Business', 'Organization', 'Project', 'Portfolio', 'Brand', 'Non-Profit'];
+  var i = 0;
+  var len = words.length;
+  var speed = 70;
+  var delayAfterWord = 2500; // Adjust the delay time in milliseconds
+
+  function typeWord(word, index, offset) {
+    var part = word.substr(0, offset);
+    $('.changing-word').text(part);
+
+    if (offset < word.length) {
+      setTimeout(function () {
+        typeWord(word, index, offset + 1);
+      }, speed);
+    } else {
+      setTimeout(function () {
+        eraseWord(word, index, word.length);
+      }, delayAfterWord);
+    }
+  }
+
+  function eraseWord(word, index, offset) {
+    var part = word.substr(0, offset);
+    $('.changing-word').text(part);
+
+    if (offset > 0) {
+      setTimeout(function () {
+        eraseWord(word, index, offset - 1);
+      }, speed);
+    } else {
+      i = (index + 1) % len;
+      setTimeout(function () {
+        typeWord(words[i], i, 0);
+      }, speed);
+    }
+  }
+
+  $(document).ready(function () {
+    typeWord(words[i], i, 0);
+  });
 
   // Mobile Navigation Sticky
   if (window.screen.width <= 600) {
@@ -87,10 +126,6 @@ function scrollToTarget(targetId) {
   }
 }
 
-function openInNewTab(content) {
-  open(content, '_blank');
-}
-
 // Fullscreen 
 // function openFullscreen(content) {
 //   if (window.screen.width < 600) {
@@ -130,54 +165,54 @@ if (window.screen.width < 600) {
 
   function updateThemeColor() {
     themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
-    // const scrollPosition = window.scrollY;
-    // const documentHeight = Math.max(
-    //   document.body.scrollHeight,
-    //   document.body.offsetHeight,
-    //   document.documentElement.clientHeight,
-    //   document.documentElement.scrollHeight,
-    //   document.documentElement.offsetHeight
-    // );
+    const scrollPosition = window.scrollY;
+    const documentHeight = Math.max(
+      document.body.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.clientHeight,
+      document.documentElement.scrollHeight,
+      document.documentElement.offsetHeight
+    );
 
-    // const threshold = 0.7433;
+    const threshold = 0.7433;
 
-    // if (scrollPosition >= threshold * documentHeight) {
-    //   themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
-    // } else {
-    //   themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
-    // }
+    if (scrollPosition >= threshold * documentHeight) {
+      themeColorMetaTag.setAttribute("content", "#262626"); 
+    } else {
+      themeColorMetaTag.setAttribute("content", "#000000"); 
+    }
   }
-  // window.addEventListener('scroll', updateThemeColor);
+  window.addEventListener('scroll', updateThemeColor);
   updateThemeColor();
 }
 
-  //   const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
-  //   let colorUpdated = false; // Flag to track if the color has been updated
-  //   let thresholdHeight = 0;
+//   const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+//   let colorUpdated = false; // Flag to track if the color has been updated
+//   let thresholdHeight = 0;
 
-  //   function updateThemeColor() {
-  //     const scrollPosition = window.scrollY;
-  //     const documentHeight = Math.max(
-  //       document.body.scrollHeight,
-  //       document.body.offsetHeight,
-  //       document.documentElement.clientHeight,
-  //       document.documentElement.scrollHeight,
-  //       document.documentElement.offsetHeight
-  //     );
+//   function updateThemeColor() {
+//     const scrollPosition = window.scrollY;
+//     const documentHeight = Math.max(
+//       document.body.scrollHeight,
+//       document.body.offsetHeight,
+//       document.documentElement.clientHeight,
+//       document.documentElement.scrollHeight,
+//       document.documentElement.offsetHeight
+//     );
 
-  //     const threshold = 0.7433;
+//     const threshold = 0.7433;
 
-  //     if (scrollPosition >= threshold * documentHeight) {
-  //       if (!colorUpdated) {
-  //         themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
-  //         colorUpdated = true; // Set the flag to true
-  //         thresholdHeight = scrollPosition; // Store the current threshold height
-  //       }
-  //     } else if (scrollPosition <= thresholdHeight) {
-  //       // Reset the color when scrolling back up to the stored threshold height
-  //       themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
-  //       colorUpdated = false; // Reset the flag
-  //     }
-  //   }
+//     if (scrollPosition >= threshold * documentHeight) {
+//       if (!colorUpdated) {
+//         themeColorMetaTag.setAttribute("content", "#000000"); // Change to black
+//         colorUpdated = true; // Set the flag to true
+//         thresholdHeight = scrollPosition; // Store the current threshold height
+//       }
+//     } else if (scrollPosition <= thresholdHeight) {
+//       // Reset the color when scrolling back up to the stored threshold height
+//       themeColorMetaTag.setAttribute("content", "#262626"); // Change to default color
+//       colorUpdated = false; // Reset the flag
+//     }
+//   }
 
-  // window.addEventListener('scroll', updateThemeColor);
+// window.addEventListener('scroll', updateThemeColor);

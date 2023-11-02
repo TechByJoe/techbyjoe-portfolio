@@ -4,11 +4,12 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech By Joe</title>
-  <meta name="theme-color" content="#262626">
+  <meta name="theme-color" content="">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="desktopNav.css">
   <link rel="stylesheet" href="mobileNav.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 
@@ -46,22 +47,35 @@
     </div>
   </header>
 
-  <main id="landing" class="sectionBox">
+  <!--  <main id="landing" class="sectionBox">
     <div id="landing-text">
       Create something amazing for your business
-      <!-- <div class="sliding-words">
+      <div class="sliding-words">
           <div class="word">Business</div>
           <div class="word">Portfolio</div>
           <div class="word">Organization</div>
           <div class="word">Business</div>
           <div class="word">Project</div>
-        </div> -->
+        </div> 
     </div>
     </div>
     <a id="cta" class="sectionBox" href="mailto:joe@techbyjoe.co">It all starts with an email</a>
     <span id="explore" class="mobile" onclick="scrollToTarget('home')">Explore </span>
     <span class="arrowIcon" onclick="scrollToTarget('home')"></span>
-  </main>
+  </main>-->
+
+  <div id="landing" class="sectionBox">
+    <div id="landing-text">
+      Create something amazing for your
+      <div id="changing-word-container">
+        <div class=" changing-word"></div>
+      </div>
+    </div>
+    <a id="cta" class="sectionBox" href="mailto:joe@techbyjoe.co">It all starts with an email</a>
+    <span id="explore" class="mobile" onclick="scrollToTarget('home')">Explore </span>
+    <span class="arrowIcon" onclick="scrollToTarget('home')"></span>
+  </div>
+  </div>
 
   <br>
 
