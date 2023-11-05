@@ -569,7 +569,7 @@ iframe {
   }
 
   .changing-word {
-    min-height: 1.48em
+    min-height: 48px;
   }
 
   #landing {
