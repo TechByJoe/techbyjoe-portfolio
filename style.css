@@ -202,18 +202,6 @@ html {
   text-align: center;
 }
 
-/* #changing-word-container {
-  display: inline-block;
-  margin-top: 0;
-}
-#landing-text{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  gap: 10px;
-} */
-
-
 #cta {
   position: relative;
   padding: 0.5vw 1.5vw;
@@ -474,14 +462,17 @@ iframe {
 
 }
 
-/* small screens */
+/* small screens / tablet horizontal */
 @media all and (max-width: 1250px) and (min-width: 950px) {
   #landing{
     background-position: 50% 70%;
   }
+  .changing-word {
+    min-height: 1.53em;
+  }
 }
 
-/* tablet */
+/* tablet vertical */
 @media all and (max-width: 950px) and (min-width: 600px) {
 
   #landing{
@@ -505,6 +496,10 @@ iframe {
 
   .header {
     font-size: 5vw;
+  }
+  
+  .changing-word {
+    min-height: 1.53em;
   }
 
 
@@ -573,6 +568,10 @@ iframe {
     font-size: 2em;
   }
 
+  .changing-word {
+    min-height: 1.48em
+  }
+
   #landing {
     padding: 6vw 4.5vw 6vw;
     background-attachment: fixed;
@@ -584,6 +583,7 @@ iframe {
     align-items: center;
     background-position: 80% 47.5em;
     background-size: 280%;
+    animation: none;
   }
 
   #cta {
