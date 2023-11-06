@@ -164,6 +164,7 @@ html {
 
 
 #landing {
+  animation: fadeIn ease 1.5s;
   background-image: url('landing.jpg');
   background-size: cover;
   background-attachment: fixed;
