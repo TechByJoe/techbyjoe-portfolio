@@ -164,7 +164,7 @@ html {
 
 
 #landing {
-  animation: fadeIn ease 1.5s;
+  animation: fadeIn ease 1s;
   background-image: url('landing.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -584,7 +584,7 @@ iframe {
     align-items: center;
     background-position: 80% 47.5em;
     background-size: 280%;
-    animation: none;
+    /* animation: none; */
   }
 
   #cta {
