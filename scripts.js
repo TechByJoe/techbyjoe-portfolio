@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.documentElement.offsetHeight
       );
 
-      const threshold = 0.7433;
+      const threshold = 0.7431;
 
       if (scrollPosition >= threshold * documentHeight) {
         themeColorMetaTag.setAttribute("content", "#262626");
