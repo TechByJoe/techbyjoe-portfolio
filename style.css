@@ -11,6 +11,10 @@ div {
   /* padding-left: 12px; */
 }
 
+body {
+  transition: transform 0.3s ease-in-out;
+}
+
 #bottomInfo {
   animation: fadeInUp ease 2s;
   animation-iteration-count: 1;
@@ -176,9 +180,9 @@ html {
 }
 
 #landing-text {
-  font-size: 2.45rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  display: flex;
+  display: inline;
   align-items: center;
   overflow: hidden;
   margin-top: 0.8em;
@@ -196,7 +200,10 @@ html {
 .changing-word {
   min-height: 1.5em;
   padding-left: 12px;
+  
+  transition: height 3s ease-in-out;
 }
+
 
 #changing-word-container {
   text-align: center;
@@ -283,7 +290,7 @@ body h1 {
 }
 
 .textBox {
-  font-size: 1.2em;
+  font-size: 1.05em;
   color: white;
   padding-top: 0.5vw;
   display: flex;
@@ -325,7 +332,7 @@ iframe {
 }
 
 #content {
-  margin: 0 auto;
+  margin: 0 8.5vw;
 }
 
 #content .sectionBox {
@@ -382,12 +389,17 @@ iframe {
 #viewWebsite {
   position: absolute;
   padding: 1.5vw 0px 1.5vw 0px;
-  right: 16.75em;
-  bottom: 1.5vw;
+  right: 10.75em;
+  bottom: 1.75vw;
   min-width: 110px;
-  background-color: #428BFF;
+  background-color: #4297ff;
   color: white;
   cursor: pointer;
+  transition: background-color 0.25s !important;
+}
+
+#viewWebsite:hover {
+  background-color : rgb(29, 118, 206);
 }
 
 #bottomInfo {
@@ -412,7 +424,7 @@ iframe {
 
 @media all and (max-width: 1157px) {
 
-  #landing{
+  #landing {
     padding: 2em;
   }
 
@@ -423,10 +435,17 @@ iframe {
     grid-template-rows: auto auto;
     gap: 10px;
   }
+
   .changing-word {
     padding: 0;
   }
 
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+  #landing-text {
+    display: inline;
+  }
 }
 
 @media all and (min-width: 850px) {
@@ -448,7 +467,7 @@ iframe {
 
   .image {
     height: auto;
-    width: 60%;
+    width: 70%;
   }
 
   #viewWebsite {
@@ -464,9 +483,10 @@ iframe {
 
 /* small screens / tablet horizontal */
 @media all and (max-width: 1250px) and (min-width: 950px) {
-  #landing{
+  #landing {
     background-position: 50% 70%;
   }
+
   .changing-word {
     min-height: 1.53em;
   }
@@ -475,7 +495,7 @@ iframe {
 /* tablet vertical */
 @media all and (max-width: 950px) and (min-width: 600px) {
 
-  #landing{
+  #landing {
     background-position: 50% 74%;
   }
 
@@ -497,7 +517,7 @@ iframe {
   .header {
     font-size: 5vw;
   }
-  
+
   .changing-word {
     min-height: 1.53em;
   }
