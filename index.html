@@ -26,12 +26,10 @@
     <div id="navHeader">
       <div id="navContainer">
         <ul class="topNav" id="topNav">
-          <a style="cursor: pointer;" onclick="scrollToTarget('headerContainer')">About</a>
-          <a style="cursor: pointer;" onclick="scrollToTarget('sustainability_organization')">Sustainability
-            Organization</a>
-          <a style="cursor: pointer;" onclick="scrollToTarget('mechanical_engineer_portfolio')">Mechanical
-            Engineer Portfolio</a>
-          <a style="cursor: pointer;" onclick="scrollToTarget('bottomInfo')">Get in Touch</a>
+          <a href="mailto:joe@techbyjoe.co" style="cursor: pointer">Get in Touch</a>
+          <a href="https://joe.typedream.app" style="cursor: pointer;">Explore My Portfolio</a>
+          <a href="https://www.instagram.com/techbyjoeco/" style="cursor: pointer;">Follow my Instagram</a>
+          
         </ul>
       </div>
     </div>
@@ -57,7 +55,7 @@
 
   <div id="content">
     <div class="sectionBox" id="home">
-      <h2 style="padding: 0px; margin: 0px;">About</h2>
+      <!-- <h2 style="padding: 0px; margin: 0px;">About</h2> -->
       <div id="aboutContainer">
         <img alt="tech by joe logo" class="logo" id="desktopLogo" src="images/logo.webp">
         <div class="textBox">
@@ -65,69 +63,41 @@
           user-friendly websites that deliver exceptional digital experiences. With additional expertise in graphic
           design, I ensure a cohesive visual presence across all aspects of your brand. Let's work together to elevate
           your online presence and bring your unique ideas to life.
-          Keep reading to explore some of my work.
         </div>
       </div>
     </div>
 
     <br>
-
-    <div class="sectionBox" id="sustainability_organization">
-      <h2 style="padding: 0px; margin: 0px;">Sustainability Organization</h2>
-      <div class="textBox">
-        This client needed to build a brand but didn't know where to start. With an outdated website and a mission
-        centered
-        around sustainability, they sought a partner who could establish their digital presence while creating a
-        cohesive
-        brand
-        identity. In response to their needs, I designed Gaia's logo, promotional banners, and marketing materials, in
-        addition to crafting their current website. The result is a compelling online platform that reflects Gaia's
-        commitment to the environment and empowers their vision for a greener future.
-      </div>
-    </div>
-
-    <br>
-
-    <div class="imageContainer">
-      <img alt="sustainability organization website landing page" class="image" src="images/gaia.webp">
-      <a href="https://gaiacompetition.com" target="_blank">
-        <div id="viewWebsite" class="sectionBox">View
-          Website
-        </div>
-      </a>
-    </div>
-
-    <br>
-
-    <div class="sectionBox" id="mechanical_engineer_portfolio">
-      <h2 style="padding: 0px; margin: 0px;">Mechanical Engineer Portfolio</h2>
-      <div class="textBox">
-        For this client, my focus was to effectively showcase their engineering achievements through a compelling online
-        portfolio highlighting their expertise. Additionally, I designed a unique monogram and crafted a custom email
-        signature that that captured their professional identity. The result was a seamless fusion of design and
-        engineering excellence, leaving a lasting impression on recruiters and industry peers alike.
-      </div>
-    </div>
-
-    <br>
-
-    <div class="imageContainer">
-      <img alt="mechanical engineer portfolio website landing page" class="image" src="images/mt_portfolio.webp">
-      <a href="https://marktarazi.com" target="_blank">
-        <div id="viewWebsite" class="sectionBox">View Website
-        </div>
-      </a>
-    </div>
-
 
     <script type="text/javascript" src="scripts.js"></script>
 
-    <br>
-
-    <div id='bottomInfo' class="sectionBox">
-      <img alt="tech by joe logo" class="logo small mobile" src="images/logo.webp">
+    <div id='contactEmail' class="sectionBox">
+      <!-- <img alt="tech by joe logo" class="logo small mobile" src="images/logo.webp"> -->
       <div id="mobileContactInfo">Contact me at <a href="mailto:joe@techbyjoe.co"
-          style="color:rgb(255, 255, 255)">Joe@techbyjoe.co </a> </div>
+          style="color:white">Joe@techbyjoe.co </a> </div>
+    </div>
+
+
+    <div class="mobile bottomInfo sectionBox" onclick="window.location = 'https:/\/joe.typedream.app'">
+      <img alt="tech by joe logo" class="logo small mobile" src="images/portfolio_icon.png">
+      <div id="mobileContactInfo"> <a href="https://joe.typedream.app"
+          style="color: white; text-decoration: none;">Explore my Portfolio </a> </div>
+    </div>
+
+    <br class="mobile">
+
+    <div class="mobile bottomInfo sectionBox"  onclick="window.location = 'https:/\/www.instagram.com/techbyjoeco/'" >
+      <img alt="tech by joe logo" class="logo small mobile" src="images/instagram_icon.png">
+      <div id="mobileContactInfo">Follow my Instagram <a href="https://www.instagram.com/techbyjoeco/"
+        style="color: white; text-decoration: none;"> </a> </div>
+    </div>
+
+    <br class="mobile">
+
+    <div class="mobile bottomInfo sectionBox" onclick="window.location = 'mailto:joe@techbyjoe.co'">
+      <img alt="tech by joe logo" class="logo small mobile" src="images/logo.webp">
+      <div id="mobileContactInfo"> <a href="mailto:joe@techbyjoe.co"
+        style="color: white; text-decoration: none;">Joe@techbyjoe.co </a> </div>
     </div>
 
   </div>
