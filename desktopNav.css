@@ -52,10 +52,12 @@
      font-size: 17px;
      word-wrap: break-word;
      transition: color 0.3s;
+     transition: font-size 0.35s !important;
  }
 
  .topNav a:hover {
      color: #a1b8de;
+     font-size: 102.75%;
  }
 
  .topNav a.active {
